@@ -1,12 +1,4 @@
-<body class="fix-header fix-sidebar card-no-border">
- <!-- ============================================================== -->
-    <!-- Preloader - style you can find in spinners.css -->
-    <!-- ============================================================== -->
-  
-    <!-- ============================================================== -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- ============================================================== -->
-    <div id="main-wrapper">
+
         <!-- ============================================================== -->
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
@@ -16,29 +8,24 @@
                 <!-- Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="">
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="<?php echo base_url();?>assets/images/.png" alt="dicatto" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img src="<?php echo base_url();?>assets/images/.png" alt="dicatto" class="light-logo" />
+                            <img src="<?php echo base_url();?>assets/images/favicon.png" alt="homepage" class="light-logo" height="30" width="30" />
                         </b>
                         <!--End Logo icon -->
-                        <!-- Logo text -->
-<!--
-						<span>
-               
-                        <img src="<?php echo base_url();?>assets/images/admin-panel-logo.png" alt="Webucate" class="dark-logo" />
-                  
-                         <img src="<?php echo base_url();?>assets/images/admin-panel-logo.png" alt="Webucate" class="light-logo" /></span> 
--->
-					</a>
+                        <!-- Logo text --><span>
+                         <!-- dark Logo text -->
+                         <img src="<?php echo base_url();?>assets/images/dicattologo.png" alt="homepage" class="dark-logo" height="70" width="200" />
+                         <!-- Light Logo text -->    
+                         <img src="<?php echo base_url();?>assets/images/dicattologo.png" class="light-logo" alt="homepage" height="70" width="200" /></span> </a>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
                 <!-- ============================================================== -->
-                  <div class="navbar-collapse">
+                <div class="navbar-collapse">
                     <!-- ============================================================== -->
                     <!-- toggle and nav items -->
                     <!-- ============================================================== -->
@@ -58,12 +45,12 @@
                     <!-- User profile and search -->
                     <!-- ============================================================== -->
                     <ul class="navbar-nav my-lg-0">
-                 
+                       <!-- ============================================================== -->
+                        <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown u-pro">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="<?php echo base_url();?>assets/images/users/1.jpg" alt="user" class="" /> <span class="hidden-md-down">Mark Sanders &nbsp;<i class="fa fa-angle-down"></i></span> </a>
-                            <div class="dropdown-menu dropdown-menu-right animated fadeIn">
-                                <ul class="dropdown-user">
+
+                         
                                     <!-- <li>
                                         <div class="dw-user-box">
                                             <div class="u-img"><img src="../assets/images/users/1.jpg" alt="user"></div>
@@ -79,6 +66,13 @@
                                     <li role="separator" class="divider"></li>
                                     <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
                                     <li role="separator" class="divider"></li> -->
+
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="" /> <span class="hidden-md-down">Mark Sanders &nbsp;<i class="fa fa-angle-down"></i></span> </a>
+                            <div class="dropdown-menu dropdown-menu-right animated fadeIn">
+                                <ul class="dropdown-user">
+                                   
+                                   
+
                                     <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
                                 </ul>
                             </div>
@@ -87,3 +81,6 @@
                 </div>
             </nav>
         </header>
+
+    </div>
+</body>

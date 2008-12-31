@@ -1,12 +1,17 @@
 <?php include ('header.php');?>
 <?php include ('nav.php');?>
 <?php include ('sidebar.php');?>
+<!DOCTYPE html>
+<html lang="en">
+
+
 
 
     
         <div class="page-wrapper">
             <!-- ============================================================== -->
             <!-- Container fluid  -->
+
             <!-- ============================================================== -->
             <div class="container-fluid">
                 <!-- ============================================================== -->
@@ -33,7 +38,7 @@
                                 <h4 class="card-title">vendor list</h4>
                                 <h6 class="card-subtitle"></h6>
                                 <div class="table-responsive">
-                                    <table id="demo-foo-addrow"  class="table mt-30 table-hover contact-list" data-page-size="10">
+                                    <table id=""  class="table mt-30 table-hover contact-list" data-page-size="10">
                                         <thead>
                                             <tr>
                                                  <th>No</th>
@@ -106,8 +111,7 @@
 </html>
 
 
-<script type="text/javascript">
-    <script>
+<!-- <script type="text/javascript">
     $(function() {
         $('#myTable').DataTable();
             var table = $('#example').DataTable({
@@ -135,7 +139,6 @@
                     });
                 }
             });
-            // Order by the grouping
             $('#example tbody').on('click', 'tr.group', function() {
                 var currentOrder = table.order()[0];
                 if (currentOrder[0] === 2 && currentOrder[1] === 'asc') {
@@ -147,5 +150,43 @@
         
     });
   
-    </script>
-</script>
+</script> -->
+
+    
+  <script src="<?php echo base_url();?>assets/vendors/jquery/jquery.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="<?php echo base_url();?>assets/vendors/bootstrap/js/popper.min.js"></script>
+    <script src="<?php echo base_url();?>assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+    
+    
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="<?php echo base_url();?>assets/vendors/ps/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="<?php echo base_url();?>main/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="<?php echo base_url();?>main/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="<?php echo base_url();?>/main/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!--morris JavaScript -->
+    <script src="<?php echo base_url();?>assets/vendors/raphael/raphael-min.js"></script>
+    <script src="<?php echo base_url();?>assets/vendors/morrisjs/morris.min.js"></script>
+    <!--c3 JavaScript -->
+    <script src="<?php echo base_url();?>assets/vendors/d3/d3.min.js"></script>
+    <script src="<?php echo base_url();?>assets/vendors/c3-master/c3.min.js"></script>
+    <!-- Popup message jquery -->
+    <script src="<?php echo base_url();?>assets/vendors/toast-master/js/jquery.toast.js"></script>
+    
+
+    <!--Sparkline JavaScript -->
+    <script src="<?php echo base_url();?>assets/vendors/sparkline/jquery.sparkline.min.js"></script>
+
+    
+    <!-- Chart JS -->
+    <script src="<?php echo base_url();?>main/js/dashboard1.js"></script>
+    <!-- ============================================================== -->
+    <!-- Style switcher -->
+    <!-- ============================================================== -->
+    <script src="<?php echo base_url();?>assets/vendors/styleswitcher/jQuery.style.switcher.js"></script>

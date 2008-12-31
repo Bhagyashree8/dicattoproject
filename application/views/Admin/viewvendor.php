@@ -39,7 +39,7 @@
           <div class="col-lg-12 col-md-12">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title mb-20 mt-0 align-self-center">Add new Product</h5>
+                
                 <div class="row">
                  
                   <!-- End of product slider -->
@@ -78,7 +78,6 @@
                                   <input type="Email" class="form-control font-14"  placeholder="Email Id">
                                 </div>
                               </div>
-
                             </div>
                               
                               
@@ -164,15 +163,6 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-6 col-xs-6">
-                            <div class="form-group">
-                              <label class="control-label text-primary font-12">Location</label>
-                              <div>
-                                <input type="text" class="form-control font-14"  placeholder="Location">
-                              </div>
-                            </div>
-                            
-                          </div>
 
                         
                         <!--   <div class="col-lg-4 col-md-4">
