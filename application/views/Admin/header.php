@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url();?>/assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url();?>assets/images/favicon.png">
     <title>dicatto</title>
 
     <link href="<?php echo base_url();?>assets/vendors/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
@@ -40,3 +40,26 @@
 
 
 </head>
+
+                
+    <!-- ============================================================== -->
+    <script src="<?php echo base_url();?>assets/vendors/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="<?php echo base_url();?>assets/vendors/bootstrap/js/popper.min.js"></script>
+    <script src="<?php echo base_url();?>assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="<?php echo base_url();?>assets/vendors/ps/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="<?php echo base_url();?>main/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="<?php echo base_url();?>main/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="<?php echo base_url();?>mainjs/custom.min.js"></script>
+    <!-- Footable -->
+    <script src="<?php echo base_url();?>assets/vendors/footable/js/footable.all.min.js"></script>
+    <!--FooTable init-->
+    <script src="<?php echo base_url();?>main/js/footable-init.js"></script>
+    <!-- ============================================================== -->
+    <!-- Style switcher -->
+    <!-- ============================================================== -->
+    <script src="<?php echo base_url();?>assets/vendors/styleswitcher/jQuery.style.switcher.js"></script>
