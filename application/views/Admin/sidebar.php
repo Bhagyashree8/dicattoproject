@@ -4,7 +4,8 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-						<li> <a  href="" aria-expanded="false"><i class="mdi mdi-apps mr-10"></i>vendor list</a></li>
+						<li> <a  href="" aria-expanded="false"><i class="mdi mdi-apps mr-10"></i>Vendor list</a></li>
+                        <li> <a  href="" aria-expanded="false"><i class="mdi mdi-apps mr-10"></i>Add Vendor</a></li>
 
                     </ul>
                 </nav>
