@@ -20,6 +20,21 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->view('index');
+		// $this->load->view('vendor_register');
+	}
+
+
+	public function vendorForm()
+	{
+		// var_dump(3234);exit();
+		$this->load->view('vendor_register');
+		// $this->load->view('vendor_register');
+	}
+
+	// function to store data of vendors 
+	public function registerVendors()
+	{
+		var_dump($_POST); exit();
 	}
 }

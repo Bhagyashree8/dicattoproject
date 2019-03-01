@@ -1,3 +1,4 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 <style type="text/css">
@@ -30,34 +31,34 @@ padding-left: 21px;
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Dicatto</title>        
 		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>assets/images/favicon.png">
         
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="css/assets/bootstrap.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/assets/bootstrap.css">
         
         <!-- Font Awesome Icon -->
-        <link rel="stylesheet" href="css/assets/font-awesome.min.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/assets/font-awesome.min.css">
         
         <!-- Owl Carousel CSS -->
-        <link rel="stylesheet" href="css/assets/owl.carousel.css">
-        <link rel="stylesheet" href="css/assets/owl.transitions.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/assets/owl.carousel.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/assets/owl.transitions.css">
         
         <!-- Animate CSS -->
-        <link rel="stylesheet" href="css/assets/animate.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/assets/animate.css">
 		
 		<!-- Google Web Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Exo:300,400,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
      
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/assets/responsive.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/normalize.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
+		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/assets/responsive.css">
         <script src="js/vendor/modernizr-3.3.1.min.js"></script>
 		
 		<!-- Color Switcher -->
-        <link rel="stylesheet" href="css/switcher.core.min.css">
-        <link rel="stylesheet" href="css/switcher.helper.css">
-		<link id="main-style" rel="stylesheet" type="text/css" href="css/styles/blue.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/switcher.core.min.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/switcher.helper.css">
+		<link id="main-style" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/styles/blue.css">
 		
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -83,7 +84,7 @@ padding-left: 21px;
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-                <img src="images/dicattologo.png" class="img-responsive logohome" alt="">		
+                <img src="<?php echo base_url(); ?>assets/images/dicattologo.png" class="img-responsive logohome" alt="">		
         </div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -107,7 +108,7 @@ padding-left: 21px;
         <div class="container">
             <div class="row">
                 <div class="col-md-12 featured-center wow zoomIn" data-wow-duration="1.5s" data-wow-delay=".3s">
-                <img src="images/slider.png" class="img-responsive" alt="app-o2">
+                <img src="<?php echo base_url(); ?>assets/images/slider.png" class="img-responsive" alt="app-o2">
              </div>
                
             </div>
@@ -245,7 +246,7 @@ padding-left: 21px;
                     <img src="images/mobile02.png" alt="">
                 </div> -->
                 <div class="ad-frame-two wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".4s">
-                    <img src="images/screen.png" alt="">
+                    <img src="<?php echo base_url(); ?>assets/images/screen.png" alt="">
                 </div>
             </div>
             <div class="col-sm-7 col-sm-12">
@@ -629,7 +630,7 @@ padding-left: 21px;
                
             </div>
             <div class="col-sm-12 col-md-4 text-center fadeInUp">
-                <img src="images/contact.png" width="120" class="fadeInUp">        
+                <img src="<?php echo base_url();?>assets/images/contact.png" width="120" class="fadeInUp">        
                 <h3 class="fadeInUp">+91 9112234515</h3>
                  <h3 class="fadeInUpl">admin@dicatto.com</h3>
                 
@@ -688,31 +689,31 @@ padding-left: 21px;
 			SCRIPTS 
 	============================== -->
     <!-- jQuery Library -->
-    <script src="../../../../../code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+    <!-- <script src="../../../../../code.jquery.com/jquery-1.12.0.min.js"></script> -->
+    <script>window.jQuery || document.write('<script src="<?php echo base_url(); ?>assets/js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
     <!-- Bootstrap JS -->
-    <script src="js/assets/bootstrap.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/assets/bootstrap.min.js"></script>
     <!-- Owl Carousel JS -->
-    <script src="js/assets/owl.carousel.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/assets/owl.carousel.min.js"></script>
     <!-- WOW Js -->
-    <script src="js/assets/wow.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/assets/wow.min.js"></script>
     <!-- Sticky JS -->
-    <script src="js/assets/jquery.sticky.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/assets/jquery.sticky.js"></script>
     <!-- Smooth Scrool -->
-    <script src="js/assets/smooth-scroll.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/assets/smooth-scroll.js"></script>
     <!-- AjaxChimp JS -->
-    <script src="js/assets/jquery.ajaxchimp.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/assets/jquery.ajaxchimp.js"></script>
 	<!-- Mail JS -->
-	<script src="js/mail.js"></script>
+	<script src="<?php echo base_url(); ?>assets/js/mail.js"></script>
     <!-- Color Switcher -->
-    <script src="js/base.js"></script>
-    <script src="js/jquery.cookie.js"></script>
-    <script src="js/switcher.core.js"></script>
-    <script src="js/switcher.helper.js"></script>
-    <script src="js/switcher.load.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/base.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/jquery.cookie.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/switcher.core.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/switcher.helper.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/switcher.load.js"></script>
     <!-- Custom JS -->
-    <script src="js/plugins.js"></script>
-    <script src="js/function.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/plugins.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/function.js"></script>
 	
     
     </body>
