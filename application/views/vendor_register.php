@@ -155,10 +155,11 @@ padding-left: 21px;
                             <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                 <label> Location: </label> <input type="text" placeholder="Location" id="location" name="location">
                             </div>
+
                             <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                                <!-- <input type="email" placeholder="Email" id="email" name="email"> -->
-                                <label> Firm Address: </label>
-                                <textarea placeholder="Firm Address" id="firm_address" name="firm_address"></textarea>
+                                <label>Firm Address: </label>
+                                <input type="file" placeholder="Firm Address" id="firm_address" name="firm_address">
+                                <!-- <input type="file" class="form-control" name="avatar"> -->
                             </div>
 
                             <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">

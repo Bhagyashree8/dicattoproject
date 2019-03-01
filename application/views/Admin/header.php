@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url();?>assets/images/favicon.png">
-    <title>dicatto</title>
+    <title>Dicatto</title>
 
     <link href="<?php echo base_url();?>assets/vendors/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
     <!-- This page CSS -->

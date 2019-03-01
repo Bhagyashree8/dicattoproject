@@ -23,6 +23,11 @@ class Vendor extends CI_Controller {
 	// function to store data of vendors 
 	public function registerVendors()
 	{
+		if(isset($_FILES["firm_address"]["tmp_name"]) ) {
+			$file_input_name = "firm_address";
+			$firm_address_img = $this->User_model->move_image($_FILES["firm_address"], 'images/users/',$file_input_name);
+		} 
+
 		if(isset($_FILES["uid_card"]["tmp_name"]) ) {
 			$file_input_name = "uid_card";
 			$uid_path = $this->User_model->move_image($_FILES["uid_card"], 'images/users/',$file_input_name);
@@ -58,6 +63,7 @@ class Vendor extends CI_Controller {
 			"mobile" => $_POST["contact"] ?? null,
 			"location" => $_POST["location"] ?? null,
 			"firm_address" => $_POST["firm_address"] ?? null,
+			"firm_address_img" => $firm_address_img ?? null,
 			"uid_card" => $uid_path ?? null ,
 			"uploaded_picture" => $picture_path ?? null,
 			"pan_card" => $pan_path ?? null,
@@ -65,6 +71,7 @@ class Vendor extends CI_Controller {
 			"gst_card" => $gst_path ?? null,
 			"canceled_cheque" => $canceled_cheque_path ?? null ,
 			"terms_conditions" => $_POST["terms_conditions"] ?? null,
+			"role_id" => 2,
 			"created_at" =>date('Y-m-d H:i:s', time()), 
 			"updated_at" =>date('Y-m-d H:i:s', time()), 
 		];
@@ -137,5 +144,19 @@ class Vendor extends CI_Controller {
 			"created_at" =>date('Y-m-d H:i:s', time()), 
 			"updated_at" =>date('Y-m-d H:i:s', time()), 
 		];
+	}
+
+	/************************** function to delete vendor ************/
+	public function deleteVendor($id)
+	{
+		$isDeleted = $this->User_model->delete($id);
+
+		if($isDeleted) {
+			$this->session->set_flashdata("success","Vendor Deleted successfully");
+		} else {
+			$this->session->set_flashdata("error","Vendor not deleted");
+		}
+
+		redirect('Admin/vendors', 'refresh');
 	}
 }

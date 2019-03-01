@@ -315,20 +315,20 @@
     </script>
 
     <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="../assets/vendors/ps/perfect-scrollbar.jquery.min.js"></script>
+    <script src="<?php echo base_url();?>assets/vendors/ps/perfect-scrollbar.jquery.min.js"></script>
     <!--Wave Effects -->
-    <script src="js/waves.js"></script>
+    <script src="<?php echo base_url();?>js/waves.js"></script>
     <!--Menu sidebar -->
-    <script src="js/sidebarmenu.js"></script>
+    <script src="<?php echo base_url();?>js/sidebarmenu.js"></script>
     <!--stickey kit -->
-    <script src="../assets/vendors/sticky-kit-master/dist/sticky-kit.min.js"></script>
-    <script src="../assets/vendors/sparkline/jquery.sparkline.min.js"></script>
+    <script src="<?php echo base_url();?>assets/vendors/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="<?php echo base_url();?>assets/vendors/sparkline/jquery.sparkline.min.js"></script>
     <!--Custom JavaScript -->
-    <script src="js/custom.min.js"></script>
+    <script src="<?php echo base_url();?>js/custom.min.js"></script>
     <!-- ============================================================== -->
     <!-- Style switcher -->
     <!-- ============================================================== -->
-    <script src="../assets/vendors/styleswitcher/jQuery.style.switcher.js"></script>
+    <script src="<?php echo base_url();?>assets/vendors/styleswitcher/jQuery.style.switcher.js"></script>
 </body>
 
 

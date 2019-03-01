@@ -8,7 +8,7 @@
   	
   	/**********function for upload file**************/
   	function move_image(array $image, $path=null, $file_input_name)
-     	{
+    {
   		$configUpload['upload_path']    = 'assets/'. $path;                 
   		$configUpload['allowed_types']  = '*';       
   		$configUpload['max_size']       = '0';                          
@@ -25,21 +25,21 @@
   		} else { $path = NULL; }
 
   		return  $path;
-    	}
+    }
 
-    	// function to insert data in users table
+    // function to insert data in users table
 
-    	public function insert($input)
-    	{
-    		$this->load->dbforge();
+	public function insert($input)
+	{
+		$this->load->dbforge();
 
-    		return $this->db->insert('users',$input);
-    	}
+		return $this->db->insert('users',$input);
+	}
 
-    	/********** function to get record by id ***********/
-    	public function getUserById($id)
-    	{
-    		$this->db
+	/********** function to get record by id ***********/
+	public function getUserById($id)
+	{
+		$this->db
   		  ->select('*')
   		  ->where('user_id',$id)
   		  ->from('users');
@@ -47,63 +47,63 @@
   		$query = $this->db->get();
 
   		return $query->row();
-    	}
+	}
 
 
-    	/*
-       * get rows from the users table
-       */
-      function getRows($params = array()){
+	/*
+   * get rows from the users table
+   */
+    public function getRows($params = array()){
 
-          // $this->db->select('*');
-          // $this->db->from('users');
-          
-          // //fetch data by conditions
-          // if(array_key_exists("conditions",$params)){
-          //     foreach ($params['conditions'] as $key => $value) {
-          //         $this->db->where($key,$value);
-          //     }
-          // }
-          
-          // if(array_key_exists("id",$params)){
-          //     $this->db->where('id',$params['id']);
-          //     $query = $this->db->get();
-          //     $result = $query->row_array();
-          // }else{
-          //     //set start and limit
-          //     if(array_key_exists("start",$params) && array_key_exists("limit",$params)){
-          //         $this->db->limit($params['limit'],$params['start']);
-          //     }elseif(!array_key_exists("start",$params) && array_key_exists("limit",$params)){
-          //         $this->db->limit($params['limit']);
-          //     }
-          //     $query = $this->db->get();
-          //     if(array_key_exists("returnType",$params) && $params['returnType'] == 'count'){
-          //         $result = $query->num_rows();
-          //     }elseif(array_key_exists("returnType",$params) && $params['returnType'] == 'single'){
-          //         $result = ($query->num_rows() > 0)?$query->row_array():FALSE;
-          //     }else{
-          //         $result = ($query->num_rows() > 0)?$query->result_array():FALSE;
-          //     }
-          // }
+      // $this->db->select('*');
+      // $this->db->from('users');
+      
+      // //fetch data by conditions
+      // if(array_key_exists("conditions",$params)){
+      //     foreach ($params['conditions'] as $key => $value) {
+      //         $this->db->where($key,$value);
+      //     }
+      // }
+      
+      // if(array_key_exists("id",$params)){
+      //     $this->db->where('id',$params['id']);
+      //     $query = $this->db->get();
+      //     $result = $query->row_array();
+      // }else{
+      //     //set start and limit
+      //     if(array_key_exists("start",$params) && array_key_exists("limit",$params)){
+      //         $this->db->limit($params['limit'],$params['start']);
+      //     }elseif(!array_key_exists("start",$params) && array_key_exists("limit",$params)){
+      //         $this->db->limit($params['limit']);
+      //     }
+      //     $query = $this->db->get();
+      //     if(array_key_exists("returnType",$params) && $params['returnType'] == 'count'){
+      //         $result = $query->num_rows();
+      //     }elseif(array_key_exists("returnType",$params) && $params['returnType'] == 'single'){
+      //         $result = ($query->num_rows() > 0)?$query->row_array():FALSE;
+      //     }else{
+      //         $result = ($query->num_rows() > 0)?$query->result_array():FALSE;
+      //     }
+      // }
 
-          // //return fetched data
-          // return $result;
+      // //return fetched data
+      // return $result;
 
-      $this->db->select("*")
-  	 	->where("email", $params["conditions"]["email"])
-  	 	->where("password", $params["conditions"]["password"])
-  	 	->from("users");
+        $this->db->select("*")
+	 	->where("email", $params["conditions"]["email"])
+	 	->where("password", $params["conditions"]["password"])
+	 	->from("users");
 
-  	 	$query = $this->db->get();
+	 	$query = $this->db->get();
 
-  	 	$result = $query->row();
+	 	$result = $query->row();
 
-  	 	return $result;
-      }
+	 	return $result;
+  }
 
-      /*************** function to get all vendors (users) ************/
-      public function getVendors()
-      {
+  /*************** function to get all vendors (users) ************/
+    public function getVendors()
+    {
         $this->db->select("*")
         ->where("role_id", 2)
         ->from("users");
@@ -113,6 +113,14 @@
         $result = $query->result();
 
         return $result;
-      }
+    }
+
+    /************** function to delete vendor ****************/
+    public function delete($id)
+    {
+        $this->db->where('user_id', $id);
+
+        return $this->db->delete('users');
+    } 
   }
 ?>

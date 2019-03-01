@@ -65,9 +65,11 @@ date_default_timezone_set('Asia/Kolkata');
     */
 	    public function logout(){
 	        $this->session->unset_userdata('isUserLoggedIn');
-	        $this->session->unset_userdata('userId');
+	        $this->session->unset_userdata('loggedUser');
 	        $this->session->sess_destroy();
-	        redirect('users/login/');
+	        
+	        //load the view
+	        $this->load->view('Admin/login');
 	    }
 	}
 ?>

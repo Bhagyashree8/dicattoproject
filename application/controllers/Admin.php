@@ -16,14 +16,15 @@ class Admin extends CI_Controller {
 		// $this->load->view('vendor_register');
 	}
 
+
 	//vendors list
 	public function vendors()
 	{
 		$data["vendors"] = $this->User_model->getVendors();
 
 		$this->load->view('Admin/vendors', $data);
-		// $this->load->view('vendor_register');
 	}
+	
 	public function addvendor()
 	{
 		$this->load->view('Admin/addvendor');
