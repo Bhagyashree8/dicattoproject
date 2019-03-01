@@ -14,7 +14,7 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">Vender</h3>
+                        <h3 class="text-themecolor">vendor</h3>
                      
                     </div>
                     
@@ -30,7 +30,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Vender list</h4>
+                                <h4 class="card-title">vendor list</h4>
                                 <h6 class="card-subtitle"></h6>
                                 <div class="table-responsive">
                                     <table id="demo-foo-addrow"  class="table mt-30 table-hover contact-list" data-page-size="10">
@@ -100,28 +100,7 @@
                     </div>
                 </div>
              
-                
-    <!-- ============================================================== -->
-    <script src="../assets/vendors/jquery/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="../assets/vendors/bootstrap/js/popper.min.js"></script>
-    <script src="../assets/vendors/bootstrap/js/bootstrap.min.js"></script>
-    <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="../assets/vendors/ps/perfect-scrollbar.jquery.min.js"></script>
-    <!--Wave Effects -->
-    <script src="js/waves.js"></script>
-    <!--Menu sidebar -->
-    <script src="js/sidebarmenu.js"></script>
-    <!--Custom JavaScript -->
-    <script src="js/custom.min.js"></script>
-    <!-- Footable -->
-    <script src="../assets/vendors/footable/js/footable.all.min.js"></script>
-    <!--FooTable init-->
-    <script src="js/footable-init.js"></script>
-    <!-- ============================================================== -->
-    <!-- Style switcher -->
-    <!-- ============================================================== -->
-    <script src="../assets/vendors/styleswitcher/jQuery.style.switcher.js"></script>
+
 </body>
 
 </html>

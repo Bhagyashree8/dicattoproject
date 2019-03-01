@@ -4,10 +4,7 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-<!--                        <li class="nav-small-cap">MAIN</li>-->
-<!--						<li><i class="mdi mdi-apps mr-10"></i><a href="<?php echo site_url()."/Admin" ?>">Dashboard</a></li>-->
-						<li> <a  href="" aria-expanded="false"><i class="mdi mdi-apps mr-10"></i>Dashboard</a></li>
-
+						<li> <a  href="" aria-expanded="false"><i class="mdi mdi-apps mr-10"></i>vendor list</a></li>
 
                     </ul>
                 </nav>
