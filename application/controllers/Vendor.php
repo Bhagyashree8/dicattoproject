@@ -55,7 +55,7 @@ class Vendor extends CI_Controller {
 			"owner_name" => $_POST["owner_name"] ?? null,
 			"firm_name" => $_POST["firm_name"] ?? null,
 			"email" => $_POST["email"] ?? null,
-			"contact" => $_POST["contact"] ?? null,
+			"mobile" => $_POST["contact"] ?? null,
 			"location" => $_POST["location"] ?? null,
 			"firm_address" => $_POST["firm_address"] ?? null,
 			"uid_card" => $uid_path ?? null ,
