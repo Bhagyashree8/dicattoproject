@@ -30,15 +30,19 @@
     <!-- You can change the theme colors from here -->
     <link href="<?php echo base_url();?>main/css/colors/default.css" id="theme" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-
-<![endif]-->
 
 
+    <!-- Bootstrap Core CSS -->
+     <link rel="stylesheet" href="<?php echo base_url();?>assets/vendors/dropify/dist/css/dropify.min.css">
+    <link href="<?php echo base_url();?>assets/vendors/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" rel="stylesheet" />
+<link href="<?php echo base_url();?>assets/vendors/bootstrap-switch/bootstrap-switch.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="<?php echo base_url();?>css/master-stylesheet.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../assets/vendors/product-slider/product-slider.css">
+  <!-- Dashboard 1 Page CSS -->
+    <link href="<?php echo base_url();?>css/pages/dashboard2.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+ 
 </head>
 
                 
@@ -63,3 +67,6 @@
     <!-- Style switcher -->
     <!-- ============================================================== -->
     <script src="<?php echo base_url();?>assets/vendors/styleswitcher/jQuery.style.switcher.js"></script>
+
+
+    
