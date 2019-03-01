@@ -126,6 +126,7 @@
                                     <table id="demo-foo-addrow" class="table mt-30 table-hover contact-list" data-page-size="10">
                                         <thead>
                                             <tr>
+                                                <th>Sr. No. </th>
                                                 <th>Owner Name</th>
                                                 <th>Firm Name</th>
                                                 <th>Email</th>
@@ -136,6 +137,7 @@
                                         </thead>
                                         <tbody>
                                             <tr>
+                                                <td>1</td>
                                                 <td>Mason Hudson</td>
                                                 <!-- <td>
                                                     <a href="javascript:void(0)"><img src="<?php echo base_url();?>/assets/images/users/4.jpg" alt="user" width="40" class="img-circle" /> Mason Hudson</a>
@@ -150,6 +152,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td>2</td>
                                                 <td>Mason Hudson</td>
                                                 <!-- <td>
                                                     <a href="javascript:void(0)"><img src="<?php echo base_url();?>/assets/images/users/4.jpg" alt="user" width="40" class="img-circle" /> Mason Hudson</a>

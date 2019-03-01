@@ -1,20 +1,26 @@
 <?php
-	
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+date_default_timezone_set('Asia/Kolkata');
+
 	/**
 	 * 
 	 */
-	class Login extends AnotherClass
+	class Login extends CI_Controller 
 	{
 		
-		function __construct(argument)
+		public function __construct()
 		{
-			# code...
+			parent::__construct();
+			$this->load->library('session');
+			$this->load->model('User_model');
+			$this->load->library('form_validation');
 		}
 
 	    /*
 	     * User login
 	     */
-	    public function login(){
+	    public function loginPost(){
 	        $data = array();
 	        if($this->session->userdata('success_msg')){
 	            $data['success_msg'] = $this->session->userdata('success_msg');
@@ -24,9 +30,10 @@
 	            $data['error_msg'] = $this->session->userdata('error_msg');
 	            $this->session->unset_userdata('error_msg');
 	        }
-	        if($this->input->post('loginSubmit')){
+
 	            $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
 	            $this->form_validation->set_rules('password', 'password', 'required');
+
 	            if ($this->form_validation->run() == true) {
 	                $con['returnType'] = 'single';
 	                $con['conditions'] = array(
@@ -34,18 +41,22 @@
 	                    'password' => md5($this->input->post('password')),
 	                    'status' => '1'
 	                );
-	                $checkLogin = $this->user->getRows($con);
+
+	                $checkLogin = $this->User_model->getRows($con);
+
 	                if($checkLogin){
 	                    $this->session->set_userdata('isUserLoggedIn',TRUE);
-	                    $this->session->set_userdata('userId',$checkLogin['id']);
-	                    redirect('users/account/');
+	                    $this->session->set_userdata('loggedUser',$checkLogin);
+
+	                    redirect('Admin/vendors');
+	                    
 	                }else{
 	                    $data['error_msg'] = 'Wrong email or password, please try again.';
 	                }
 	            }
-	        }
+
 	        //load the view
-	        $this->load->view('users/login', $data);
+	        $this->load->view('Admin/login');
 	    }
 
 

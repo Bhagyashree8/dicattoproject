@@ -47,9 +47,10 @@
 
                 <div class="card-body">
                         <h3 class="box-title mb-20">Sign In</h3>
+                        <form action="<?php echo base_url()."Login/loginPost";?>" method="POST" class="form-group">
                         <div class="form-group ">
                             <div class="col-xs-12">
-                                <input class="form-control" type="text" required="" name="username" placeholder="username"> </div>
+                                <input class="form-control" type="text" required="" name="email" placeholder="username"> </div>
                         </div>
                         <div class="form-group">
                             <div class="col-xs-12">
@@ -66,9 +67,10 @@
                         </div>
                         <div class="form-group text-center">
                             <div class="col-xs-12 pb-20">
-                                <button class="btn btn-block btn-lg btn-primary btn-rounded" type="submit">Log In</button>
+                                <input class="btn btn-block btn-lg btn-primary btn-rounded" type="submit" value="Log In" />
                             </div>
                         </div>
+                    </form>
                         <div class="row">
                             <!-- <div class="col-xs-12 col-sm-12 col-md-12 mt-10 text-center">
                                 <div class="social">
