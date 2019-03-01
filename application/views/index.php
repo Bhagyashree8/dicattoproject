@@ -31,7 +31,7 @@ padding-left: 21px;
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Dicatto</title>        
 		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>assets/images/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>assets/home/images/favicon.png">
         
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/home/css/assets/bootstrap.css">
@@ -627,7 +627,7 @@ padding-left: 21px;
                
             </div>
             <div class="col-sm-12 col-md-4 text-center fadeInUp">
-                <img src="<?php echo base_url();?>assets/images/contact.png" width="120" class="fadeInUp">        
+                <img src="<?php echo base_url();?>assets/home/images/contact.png" width="120" class="fadeInUp">        
                 <h3 class="fadeInUp">+91 9112234515</h3>
                  <h3 class="fadeInUpl">admin@dicatto.com</h3>
                 

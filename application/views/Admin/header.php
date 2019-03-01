@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +10,8 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url();?>/assets/images/favicon.png">
-    <title>WEBUCATE</title>
+    <title>dicatto</title>
+
     <link href="<?php echo base_url();?>assets/vendors/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
     <!-- This page CSS -->
     <!-- chartist CSS -->
