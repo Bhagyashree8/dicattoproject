@@ -129,6 +129,8 @@ switch (ENVIRONMENT)
  *
  * NO TRAILING SLASH!
  */
+	$project_folder = 'dicattoproject';
+
 	$view_folder = '';
 
 

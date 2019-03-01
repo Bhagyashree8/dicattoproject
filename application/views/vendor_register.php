@@ -123,65 +123,73 @@ padding-left: 21px;
 <!-- =========================
     Contact Us
     ========================== -->
+<?php if($this->session->flashdata('success')) { ?>
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="margin-right: 25px;"><span aria-hidden="true">&times;</span></button>
+        <h5><?php echo $this->session->flashdata('success'); ?></h5>
+    </div>
+<?php }?>
+
 <section class="contact" id="contact">
     <div class="container">
         <div class="row">
-            
             <div class="col-md-12 heading">
                 <h2 class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">Vendor Registration</h2>
             </div>
             <div class="col-sm-12 col-md-8 contact-form">
-                <form id="ajax-contact" method="POST" action="<?php echo site_url("registerVendors");?>">
+                <form class="form-group" method="POST" action="<?php echo base_url()."Vendor/registerVendors";?>" enctype="multipart/form-data">
                     <div class="form-group">
                         <div class="row">
                             <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                                <label> Owner Name: </label> <input type="text" placeholder="Owner Name" id="name" name="owner_name" required>
+                                <label> Owner Name: </label> <input type="text" placeholder="Owner Name" id="name" name="owner_name">
                             </div>
                             <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                                <label> Firm Name: </label> <input type="text" placeholder="Firm Name" id="firm" name="firm_name" required>
+                                <label> Firm Name: </label> <input type="text" placeholder="Firm Name" id="firm" name="firm_name">
                             </div>
                             <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                                <label> Email: </label> <input type="email" placeholder="Email" id="email" name="email" required>
+                                <label> Email: </label> <input type="email" placeholder="Email" id="email" name="email">
                             </div>
                             <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                                <label> Contact: </label> <input type="text" placeholder="Contact" id="contact" name="contact" required>
+                                <label> Contact: </label> <input type="text" placeholder="Contact" id="contact" name="contact">
                             </div>
                             <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                                <label> Location: </label> <input type="text" placeholder="Location" id="location" name="location" required>
+                                <label> Location: </label> <input type="text" placeholder="Location" id="location" name="location">
                             </div>
                             <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                                <!-- <input type="email" placeholder="Email" id="email" name="email" required> -->
+                                <!-- <input type="email" placeholder="Email" id="email" name="email"> -->
                                 <label> Firm Address: </label>
-                                <textarea placeholder="Firm Address" id="firm_address" name="firm_address" required></textarea>
+                                <textarea placeholder="Firm Address" id="firm_address" name="firm_address"></textarea>
                             </div>
 
                             <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                 <label> Adhar Card: </label>
-                                <input type="file" placeholder="Adhar Card" id="uid_card" name="uid_card" required>
+                                <input type="file" placeholder="Adhar Card" id="uid_card" name="uid_card">
+                                <!-- <input type="file" class="form-control" name="avatar"> -->
                             </div>
                             <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                <label> PAN Card: </label>
-                                <input type="file" placeholder="PAN Card" id="pan_card" name="pan_card" required>
+                                <input type="file" placeholder="PAN Card" id="pan_card" name="pan_card">
                             </div>
                             <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                <label> Firm PAN Card: </label>
-                                <input type="file" placeholder="PAN Card" id="firm_pan_card" name="firm_pan_card" required>
+                                <input type="file" placeholder="PAN Card" id="firm_pan_card" name="firm_pan_card">
                             </div>
                             <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                <label> GST Number: </label>
-                                <input type="file" placeholder="GST Number" id="gst_card" name="gst_card" required>
+                                <input type="file" placeholder="GST Number" id="gst_card" name="gst_card">
                             </div>
                             <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                 <label> Canceled Cheque: </label>
-                                <input type="file" placeholder="Adhar Card" id="canceled_cheque" name="uid_card" required>
+                                <input type="file" placeholder="Adhar Card" id="canceled_cheque" name="canceled_cheque">
                             </div>
                             <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                 <label> Uploaded Picture: </label>
-                                <input type="file" placeholder="Adhar Card" id="uploaded_picture" name="uploaded_picture" required>
+                                <input type="file" placeholder="Uploaded Picture:" id="uploaded_picture" name="uploaded_picture">
                             </div>
 
                             <div class="col-sm-12 form-btn wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".9s">
-                                <button type="submit">Register</button>
+                                <input type="checkbox" name="terms_conditions">
+                                <input type="submit" value="Register"/>
                             </div>
                         </div>
                     </div>
