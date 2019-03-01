@@ -1,0 +1,12 @@
+CREATE TABLE `dicatto`.`roles` ( `role_id` BIGINT(10) NOT NULL AUTO_INCREMENT , `name` VARCHAR(100) NULL , `created_at` DATETIME NULL , `updated_at` DATETIME NULL , PRIMARY KEY (`role_id`)) ENGINE = InnoDB;
+
+CREATE TABLE `dicatto`.`users` ( `user_id` BIGINT(10) NOT NULL AUTO_INCREMENT , `owner_name` VARCHAR(100) NULL , `firm_name` VARCHAR(100) NULL , `email` VARCHAR(100) NULL , `mobile` VARCHAR(100) NULL , `location` VARCHAR(100) NULL , `firm_address` TEXT NULL , `uid_card` VARCHAR(100) NULL , `pan_card` VARCHAR(100) NULL , `firm_pan_card` VARCHAR(100) NULL , `gst_card` VARCHAR(100) NULL , `canceled_cheque` VARCHAR(100) NULL , `status` TINYINT(100) NULL , `more_info` TEXT NULL , `terms_conditions` TINYINT(5) NULL , `created_at` DATETIME NULL , `updated_at` DATETIME NULL , PRIMARY KEY (`user_id`)) ENGINE = InnoDB;
+
+ALTER TABLE `users` ADD `uploaded_picture` VARCHAR(100) NULL AFTER `uid_card`;
+
+ALTER TABLE `users` ADD `name` VARCHAR(100) NULL AFTER `owner_name`;
+
+ALTER TABLE `users` ADD `password` VARCHAR(200) NULL AFTER `email`;
+ALTER TABLE `users` ADD `role_id` TINYINT(10) NULL AFTER `terms_conditions`;
+
+INSERT INTO `roles` (`role_id`, `name`, `created_at`, `updated_at`) VALUES (NULL, 'admin', NULL, NULL), (NULL, 'vendor', NULL, NULL);

@@ -41,7 +41,7 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">View Vendor</h3>
+                        <h3 class="text-themecolor">Add Vendor</h3>
                      
                     </div>
                    
@@ -97,8 +97,17 @@
                                   <input type="Email" class="form-control font-14"  placeholder="Email Id">
                                 </div>
                               </div>
-                             
                               
+                              <div class="row m-0">
+                                <div class="col-sm-6 col-xs-6">
+                                  <div class="form-group">
+                                    <label class="control-label text-primary font-12">Location</label>
+                                    <div>
+                                      <input type="text" class="form-control font-14" placeholder="Location">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                           <div class="form-group">
@@ -171,15 +180,6 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-6 col-xs-6">
-                            <div class="form-group">
-                              <label class="control-label text-primary font-12">Location</label>
-                              <div>
-                                <input type="text" class="form-control font-14"  placeholder="Location">
-                              </div>
-                            </div>
-                            
-                          </div>
 
                         
                         <!--   <div class="col-lg-4 col-md-4">
