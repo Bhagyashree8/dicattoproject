@@ -1,8 +1,16 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+date_default_timezone_set('Asia/Kolkata');
+
 class Welcome extends CI_Controller {
 
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->library('session');
+		$this->load->model('User_model');
+	}
 	/**
 	 * Index Page for this controller.
 	 *
@@ -25,16 +33,4 @@ class Welcome extends CI_Controller {
 	}
 
 
-	public function vendorForm()
-	{
-		// var_dump(3234);exit();
-		$this->load->view('vendor_register');
-		// $this->load->view('vendor_register');
-	}
-
-	// function to store data of vendors 
-	public function registerVendors()
-	{
-		var_dump($_POST); exit();
-	}	
 }
