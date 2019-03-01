@@ -8,9 +8,9 @@ class Admin extends CI_Controller {
 		$this->load->view('Admin/login');
 		// $this->load->view('vendor_register');
 	}
-	public function vederliest()
+	public function vendors()
 	{
-		$this->load->view('Admin/vederliest');
+		$this->load->view('Admin/vendors');
 		// $this->load->view('vendor_register');
 	}
 	public function addvendor()
