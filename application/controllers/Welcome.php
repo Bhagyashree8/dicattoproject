@@ -36,5 +36,5 @@ class Welcome extends CI_Controller {
 	public function registerVendors()
 	{
 		var_dump($_POST); exit();
-	}
+	}	
 }
