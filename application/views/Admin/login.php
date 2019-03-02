@@ -54,7 +54,12 @@
             <div class="login-box card">
 
                 <div class="card-body">
-                        <h3 class="box-title mb-20">Sign In</h3>
+                        <center><h3 class="box-title mb-20">Sign In</h3></center>
+                        <center>
+                            <a href="<?php echo base_url();?>">
+                            <img src="<?php echo base_url();?>assets/home/images/dicattologo.png" class="img-responsive logohome" alt="">
+                            </a>
+                        </center>
                         <form action="<?php echo base_url()."Login/loginPost";?>" method="POST" class="form-group">
                         <div class="form-group ">
                             <div class="col-xs-12">

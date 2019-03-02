@@ -21,6 +21,15 @@ padding-left: 21px;
     margin-left: -43px;
 }
 }
+@media only screen and (max-width: 600px) {
+.ad-mobiles {
+    left: 25%!important;
+    width: 100%!important;
+}}
+@media only screen and (max-width: 600px) {
+.aboutmo img{
+width: 250px!important;
+}}
 </style>
     
 <head>
@@ -83,7 +92,9 @@ padding-left: 21px;
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-                <img src="<?php echo base_url();?>assets/home/images/dicattologo.png" class="img-responsive logohome" alt="">       
+          <a href="<?php echo base_url();?>">
+                <img src="<?php echo base_url();?>assets/home/images/dicattologo.png" class="img-responsive logohome" alt="">
+                </a>       
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -93,7 +104,7 @@ padding-left: 21px;
             <li><a data-scroll href="#app-features">About Us</a></li>
             <li><a data-scroll href="#callCareer">Career</a></li>
             <li><a data-scroll href="#contact">Contact</a></li>
-            <li><a data-scroll href="<?php echo site_url();?>Admin/register">Register Vendor</a></li>
+            <li><a data-scroll href="<?php echo site_url();?>Admin/register">Register</a></li>
           </ul>
           </ul>
         </div><!-- /.navbar-collapse -->
@@ -167,7 +178,7 @@ padding-left: 21px;
 </section>
 
    <section>
-        <div class="container-fluid" style="padding-top: 25px;padding-bottom: 25px;">
+        <div class="container" style="padding-top: 25px;padding-bottom: 25px;">
             <div class="">
                 <div class="col-md-12 featured-center wow zoomIn" data-wow-duration="1.5s" data-wow-delay=".3s">
                 <img src="<?php echo base_url();?>assets/home/images/slider1.png" class="img-responsive" alt="app-o2">
@@ -192,8 +203,8 @@ padding-left: 21px;
             </div>
             <div class="row">
 
-              <div class="col-sm-6 text-center whydis"> 
-              <div class="box"> 
+              <div class="col-sm-6 text-right whydis"> 
+              <div class="box homebox1"> 
                 <img src="<?php echo base_url();?>assets/home/images/growwithus.jpg" width="450" height="350">
                 <div class="whytitale1 text-center">
                 <h4>Grow with us</h4> 
@@ -207,7 +218,7 @@ padding-left: 21px;
               </div>
 
                <div class="col-sm-6 text-center whydis"> 
-              <div class="box"> 
+              <div class="box homebox2"> 
                 <img src="<?php echo base_url();?>assets/home/images/ahead-of-the-competition.jpg"  width="450" height="350">
                 <div class="whytitale2 text-center">
                 <h4>Ahead of the competition</h4> 
@@ -223,7 +234,7 @@ padding-left: 21px;
                 </div>
             <div class="row dis-row">
               <div class="col-sm-6 text-center whydis"> 
-              <div class="box"> 
+              <div class="box homebox3"> 
                 <img src="<?php echo base_url();?>assets/home/images/buying-preferences.jpg" width="450" height="350">
                 <div class="whytital3 text-center">
                 <h4>Buying Preferences</h4> 
@@ -238,7 +249,7 @@ padding-left: 21px;
 
 
                <div class="col-sm-6 text-center whydis"> 
-              <div class="box"> 
+              <div class="box homebox4"> 
                 <img src="<?php echo base_url();?>assets/home/images/faster-logistic-services.jpg" width="450" height="350">
                 <div class="whytital4 text-center">
                 <h4>Faster Logistic Services</h4> 
@@ -371,18 +382,18 @@ padding-left: 21px;
 <section class="app-description" id="app-features">
     <div class="container">
         <div class="row">
-            <div class="col-sm-5 col-sm-12 ad-mobiles text-center">
+            <div class="col-sm-5 col-sm-12  text-center">
               
-                <div class="ad-frame-two wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".4s">
-                    <img src="<?php echo base_url();?>assets/home/images/png1.png" alt="">
+                <div class="ad-frame-two wow fadeInLeft aboutmo" data-wow-duration="1.5s" data-wow-delay=".4s">
+                    <img src="<?php echo base_url();?>assets/home/images/aboutimages.png" alt="">
                 </div>
             </div>
             <div class="col-sm-7 col-sm-12">
                 <div class="col-md-12 heading">
-                    <h2 class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">About dicatto</h2>
+                    <h2 class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s" style="color: #fff;">About dicatto</h2>
                 </div>
                 <div class="col-md-12 app-description-content wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                    <ul class="" style="font-size: 21px;line-height: 35px;">
+                    <ul class="" style="font-size: 21px;line-height: 35px;color: #fff;">
                     <li>Digital ease with connectedness</li>
                     <li>Convenient modes of delivery</li>
                     <li>Attractive pricing</li>
@@ -390,7 +401,7 @@ padding-left: 21px;
                     <li>Platform for physical products and digital services</li>
                     </ul>
 
-                    <p class="about-text">
+                    <p class="about-text" style="color: #fff;">
                         dicatto is about digital empowerment to the general consumers. It aims attractive consumer-centric services and deals thereby bringing digital inclusiveness of general consumer. diactto promotes “bottom-up” approach of a strong local sellers and consumer network, thereby bringing sustainability in the ever-dynamic consumer market. At dicatto, we want to give value added service to our esteemed customers. We envision to grow as pan India company (by building up a sustainable ecosystem) in next few years.
                     </p>
 
@@ -752,14 +763,6 @@ padding-left: 21px;
                             </div>
                             <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                 <input type="email" placeholder="Your Email" id="email" name="email" required>
-                            </div>
-                            <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                                <label>GST Number</label>
-                                <input type="file" placeholder="Your Email" id="email" name="email" required>
-                            </div>
-                            <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                                <label>GST Number</label>
-                                <input type="file" placeholder="Your Email" id="email" name="email" required>
                             </div>
                             <div class="col-sm-12 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".6s">
                                 <textarea placeholder="Message" id="message" name="message" required></textarea>

@@ -358,7 +358,7 @@ ul.nav a {
 
     background: #fff;
 
-    padding: 10px 0;
+    padding:29px 0px 0px 0px;
 
     -webkit-transition: all 0.3s ease 0s;
 
@@ -473,7 +473,7 @@ ul.nav a {
 
     padding: 100px 0;
 
-    background: linear-gradient(-45deg,#ffffff,#00aeef) !important;
+    background: #00aeef;
 
 	z-index:100;
 
@@ -875,9 +875,9 @@ ul.nav a {
 
     position: absolute;
 
-    top: 26px;
+    top: 10px;
 
-    left: 25%;
+    left: 0%;
 
     z-index: 1;
 
@@ -887,7 +887,7 @@ ul.nav a {
 
     height: auto;
 
-    width: 230px;
+    width: 100%;
 
 }
 
@@ -2542,4 +2542,30 @@ padding: 33px 0px 0px 0px!important;
 }
 
 }
+
+.homebox1{
+    margin-left: 100px;
+}
+.homebox2{
+margin-left: -100px;
+}
+.homebox3{
+margin-left: 100px;
+}
+.homebox4{
+margin-left: -100px;
+}
+@media only screen and (max-width: 600px) {
+.homebox1{
+    margin-left: auto;
+}
+.homebox2{
+margin-left: auto;
+}
+.homebox3{
+margin-left: auto;
+}
+.homebox4{
+margin-left: auto;
+}}
 
