@@ -25,58 +25,162 @@
                 <!-- ============================================================== -->
                 <!-- End Logo -->
                 <!-- ============================================================== -->
-                <div class="navbar-collapse">
+                <div class="profileshow">
                     <!-- ============================================================== -->
-                    <!-- toggle and nav items -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav mr-auto">
-                        <!-- This is  -->
-                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="sl-icon-menu"></i></a> </li>
-                        <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="sl-icon-menu"></i></a> </li>
-                        <!-- ============================================================== -->
-                        <!-- Search -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="icon-Magnifi-Glass2"></i></a>
-                            <form class="app-search">
-                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
-                        </li>
-                    </ul>
-                    <!-- ============================================================== -->
-                    <!-- User profile and search -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav my-lg-0">
-                       <!-- ============================================================== -->
-                        <!-- Profile -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item dropdown u-pro">
-
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="<?php echo base_url();?>assets/images/users/1.jpg" alt="user" class="" /> <span class="hidden-md-down"><?php echo $_SESSION["loggedUser"]->name; ?> &nbsp;<i class="fa fa-angle-down"></i></span> </a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <ul class="dropdown-user">
-                                    <!-- <li>
-                                        <div class="dw-user-box">
-                                            <div class="u-img"><img src="../assets/images/users/1.jpg" alt="user"></div>
-                                            <div class="u-text">
-                                                <h4>Winston June</h4>
-                                                <p class="text-muted">michelle@gmail.com</p><a href="pages-profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
-                                        </div>
-                                    </li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
-                                    <li><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
-                                    <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
-                                    <li role="separator" class="divider"></li> -->
-
-                                    <li><a href="<?php echo site_url()."Login/logout"?>"><i class="fa fa-power-off"></i> Logout</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                <div class="half">
+    <label for="profile2" class="profile-dropdown">
+      <input type="checkbox" id="profile2">
+      <img src="https://cdn0.iconfinder.com/data/icons/avatars-3/512/avatar_hipster_guy-512.png">
+      <span>John Doe</span>
+      <label for="profile2"><i class="mdi mdi-menu"></i></label>
+      <ul>
+        <li><a href="#"><i class="mdi mdi-logout"></i>Logout</a></li>
+      </ul>
+    </label>
+  </div>
             </nav>
         </header>
 
     </div>
 </body>
+
+<style type="text/css">
+.profileshow{
+    right: 0px;
+    position: absolute;
+}
+
+    .profile-dropdown {
+  display: inline-block;
+  position: relative;
+  background: #060a18;
+  margin: auto;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border-radius: 3px;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+}
+.profile-dropdown * {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+}
+.profile-dropdown input[type="checkbox"] {
+  display: none;
+}
+.profile-dropdown input[type="checkbox"]:checked ~ ul {
+  display: block;
+  animation: pulse 0.5s;
+}
+.profile-dropdown input[type="checkbox"]:checked ~ img {
+  background: #060a18;
+}
+.profile-dropdown input[type="checkbox"]:checked ~ label {
+  background: #060a18;
+}
+.profile-dropdown input[type="checkbox"]:checked ~ label i {
+  color: #f2f2f2;
+}
+.profile-dropdown input[type="checkbox"]:checked ~ label:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: calc(50% - 10px);
+  display: block;
+  border-style: solid;
+  border-width: 7px 10px 0 10px;
+  border-color: #060a18;
+  width: 0;
+  height: 0;
+}
+.profile-dropdown img {
+  display: inline-block;
+  background: #d9d9d9;
+  height: 2.5rem;
+  vertical-align: middle;
+  margin-right: 1rem;
+  margin: .5rem .75rem .5rem .5rem;
+  border-radius: 50%;
+}
+.profile-dropdown span {
+  display: inline-block;
+  vertical-align: sub;
+  width: 125px;
+  margin-right: 2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.profile-dropdown ul {
+  display: none;
+  list-style: none;
+  padding: 0;
+  marrgin: 0;
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  border-radius: 3px;
+}
+.profile-dropdown ul li a {
+  display: block;
+  padding: .75rem 1rem;
+  text-decoration: none;
+  color: #737373;
+  font-size: 1rem;
+}
+.profile-dropdown ul li a i {
+  font-size: 1.3rem;
+  vertical-align: middle;
+  margin: 0 .75rem 0 -.25rem;
+}
+.profile-dropdown ul li a:hover {
+  background: #e5e5e5;
+}
+.profile-dropdown ul li:first-child a:hover {
+  border-radius: 3px 3px 0 0;
+}
+.profile-dropdown ul li:last-child a:hover {
+  border-radius: 0 0 3px 3px;
+}
+.profile-dropdown > label {
+  position: relative;
+  height: 3.5rem;
+  display: block;
+  text-decoration: none;
+  background: transparent;
+  color: #333;
+  box-sizing: border-box;
+  padding: .9rem;
+  float: right;
+  border-radius: 0 3px 3px 0;
+}
+.profile-dropdown > label i {
+  color: #b2b2b2;
+  font-size: 1.75rem;
+}
+.profile-dropdown:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+
+</style>
