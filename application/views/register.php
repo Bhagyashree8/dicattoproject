@@ -82,8 +82,11 @@ padding-left: 21px;
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-                <img src="<?php echo base_url();?>assets/home/images/dicattologo.png" class="img-responsive logohome" alt="">       
-        </div>
+              <a href="<?php echo base_url();?>">
+                <img src="<?php echo base_url();?>assets/home/images/dicattologo.png" class="img-responsive logohome" alt="">
+                </a>       
+        </div>     
+      
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="rx-navbar-collapse">
