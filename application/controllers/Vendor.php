@@ -131,7 +131,16 @@ class Vendor extends CI_Controller {
 				$this->session->set_flashdata("error", "Sorry!! Vender not added");
 			}
 
-			redirect('Admin/addvendor', 'refresh');
+			if($loggedUser) {
+
+				redirect('Admin/addvendor', 'refresh');
+
+			} else {
+
+				redirect('Admin/register', 'refresh');
+				
+			}
+			
 		}
 		
 	}

@@ -106,6 +106,7 @@
     {
         $this->db->select("*")
         ->where("role_id", 2)
+        ->order_by("user_id","DESC")
         ->from("users");
 
         $query = $this->db->get();

@@ -5,8 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <link rel="stylesheet" href="<?php echo base_url();?>assets/vendors/dropify/dist/css/dropify.min.css">
-
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/vendors/dropify/dist/css/dropify.min.css">
 </head>
 
 
