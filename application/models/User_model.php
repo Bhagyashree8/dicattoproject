@@ -121,6 +121,14 @@
         $this->db->where('user_id', $id);
 
         return $this->db->delete('users');
-    } 
+    }
+
+    /************* function to update vendor ***********************/
+    public function update($user_id, $input)
+    {
+      $this->db->where('user_id',$user_id);
+      return $this->db->update('users',$input);
+    }
+
   }
 ?>

@@ -31,9 +31,11 @@ class Admin extends CI_Controller {
 		// $this->load->view('vendor_register');
 	}
 	
-	public function viewvendor()
+	public function viewvendor($vendor_id)
 	{
-		$this->load->view('Admin/viewvendor');
+		$data["vendor"] = $this->User_model->getUserById($vendor_id);
+
+		$this->load->view('Admin/viewvendor',$data);
 		// $this->load->view('vendor_register');
 	}
 	

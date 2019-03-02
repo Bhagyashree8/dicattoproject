@@ -44,7 +44,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">vendor list</h4>
+                                <h4 class="card-title">Vendors List</h4>
                                 <h6 class="card-subtitle"></h6>
                                 <div class="table-responsive">
                                     <table id=""  class="table mt-30 table-hover contact-list" data-page-size="10">
@@ -68,7 +68,7 @@
                                                         ?>
                                                             <tr>
                                                                 <td><?php echo $i; ?></td>
-                                                                <td><?php echo $vendor->owner_name ?? "NA"; ?></td>
+                                                                <td><a href="<?php echo site_url()."Admin/viewvendor/".$vendor->user_id; ?>"><?php echo $vendor->owner_name ?? "NA"; ?></a></td>
                                                                 <!-- <td>
                                                                     <a href="javascript:void(0)"><img src="<?php echo base_url();?>/assets/images/users/4.jpg" alt="user" width="40" class="img-circle" /> Mason Hudson</a>
                                                                 </td> -->
@@ -87,6 +87,7 @@
                                                                 </td>
                                                             </tr>
                                                         <?php
+                                                        $i++;
                                                     }
                                                 }
                                             ?>                                            

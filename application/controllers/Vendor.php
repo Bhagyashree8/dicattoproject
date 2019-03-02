@@ -87,7 +87,7 @@ class Vendor extends CI_Controller {
 			$this->session->set_flashdata("error", "Sorry!! Vender not added");
 		}
 
-		redirect('Vendor/vendorForm', 'refresh');
+		redirect('Admin/addvendor', 'refresh');
 	}
 
 
@@ -97,34 +97,34 @@ class Vendor extends CI_Controller {
 		$userId = $_POST["user_id"];
 
 
-		if(isset($_FILES["uid_card"]["tmp_name"]) ) {
+		if($_FILES["uid_card"]["tmp_name"] != "" ) {
 			$file_input_name = "uid_card";
 			$uid_path = $this->User_model->move_image($_FILES["uid_card"], 'images/users/',$file_input_name);
 		} 
-		if(isset($_FILES["pan_card"]["tmp_name"]) ) {
+		if($_FILES["pan_card"]["tmp_name"] != "" ) {
 			$file_input_name = "pan_card";
 			$pan_path = $this->User_model->move_image($_FILES["pan_card"], 'images/users/',$file_input_name);
 		} 
-		if(isset($_FILES["firm_pan_card"]["tmp_name"]) ) {
+		if($_FILES["firm_pan_card"]["tmp_name"] != "" ) {
 			$file_input_name = "firm_pan_card";
 			$firm_pan_path = $this->User_model->move_image($_FILES["firm_pan_card"], 'images/users/',$file_input_name);
 		} 
-		if(isset($_FILES["gst_card"]["tmp_name"]) ) {
+		if($_FILES["gst_card"]["tmp_name"] != "" ) {
 			$file_input_name = "gst_card";
 			$gst_path = $this->User_model->move_image($_FILES["gst_card"], 'images/users/',$file_input_name);
 		} 
 
-		if(isset($_FILES["canceled_cheque"]["tmp_name"]) ) {
+		if($_FILES["canceled_cheque"]["tmp_name"] != "" ) {
 			$file_input_name = "canceled_cheque";
 			$canceled_cheque_path = $this->User_model->move_image($_FILES["canceled_cheque"], 'images/users/',$file_input_name);
 		} 
 
-		if(isset($_FILES["uploaded_picture"]["tmp_name"]) ) {
+		if($_FILES["uploaded_picture"]["tmp_name"] != "" ) {
 			$file_input_name = "uploaded_picture";
 			$picture_path = $this->User_model->move_image($_FILES["uploaded_picture"], 'images/users/',$file_input_name);
 		} 
 
-		$user = $this->User_model->getUserById();
+		$user = $this->User_model->getUserById($userId);
 
 		$userData = [
 			"name" => $_POST["owner_name"] ?? null,
@@ -141,9 +141,18 @@ class Vendor extends CI_Controller {
 			"gst_card" => isset($gst_path) ?  $gst_path : $user->gst_card,
 			"canceled_cheque" => isset($canceled_cheque_path) ?  : $user->canceled_cheque ,
 			"terms_conditions" => $_POST["terms_conditions"] ?? null,
-			"created_at" =>date('Y-m-d H:i:s', time()), 
 			"updated_at" =>date('Y-m-d H:i:s', time()), 
 		];
+
+		$isUpdated = $this->User_model->update($userId, $userData);
+
+		if($isUpdated) {
+			$this->session->set_flashdata("success","Vendor Updated successfully");
+		} else {
+			$this->session->set_flashdata("error","Vendor not updated");
+		}
+
+		redirect('Admin/vendors', 'refresh');
 	}
 
 	/************************** function to delete vendor ************/
