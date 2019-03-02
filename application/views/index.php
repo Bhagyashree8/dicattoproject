@@ -92,29 +92,8 @@ padding-left: 21px;
             <li><a data-scroll href="#app-features">About Us</a></li>
             <li><a data-scroll href="#callCareer">Career</a></li>
             <li><a data-scroll href="#contact">Contact</a></li>
-            <?php 
-
-                if(isset($_SESSION["loggedUser"])) {
-
-                ?>
-
-                <li style="list-style-type: none;"><a data-scroll href="<?php echo site_url()."Login/logout"; ?>">Hi <?php echo $_SESSION["loggedUser"]->name; ?>,Logout</a></li>
-
-                    
-
-                <?php
-
-                }  else {
-
-                ?>
-
-                    <li><a data-scroll href="<?php echo site_url()."Admin/login"; ?>">Login</a></li>
-
-                <?php
-
-                }
-
-            ?>
+            <li><a data-scroll href="register">Register User</a></li>
+       
 
             
 
@@ -397,7 +376,7 @@ padding-left: 21px;
             <div class="col-sm-5 col-sm-12 ad-mobiles text-center">
               
                 <div class="ad-frame-two wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".4s">
-                    <img src="<?php echo base_url();?>assets/home/images/screen.png" alt="">
+                    <img src="<?php echo base_url();?>assets/home/images/png1.png" alt="">
                 </div>
             </div>
             <div class="col-sm-7 col-sm-12">
@@ -414,7 +393,7 @@ padding-left: 21px;
                     </ul>
 
                     <p class="about-text">
-                        Dicatto is about digital empowerment to the general consumers. It aims attractive consumer-centric services and deals thereby bringing digital inclusiveness of general consumer. diactto promotes “bottom-up” approach of a strong local sellers and consumer network, thereby bringing sustainability in the ever-dynamic consumer market. At dicatto, we want to give value added service to our esteemed customers. We envision to grow as pan India company (by building up a sustainable ecosystem) in next few years.
+                        dicatto is about digital empowerment to the general consumers. It aims attractive consumer-centric services and deals thereby bringing digital inclusiveness of general consumer. diactto promotes “bottom-up” approach of a strong local sellers and consumer network, thereby bringing sustainability in the ever-dynamic consumer market. At dicatto, we want to give value added service to our esteemed customers. We envision to grow as pan India company (by building up a sustainable ecosystem) in next few years.
                     </p>
 
                 </div>
