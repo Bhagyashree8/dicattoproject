@@ -23,6 +23,8 @@ class Vendor extends CI_Controller {
 	// function to store data of vendors 
 	public function registerVendors()
 	{
+		$loggedUser = isset($_SESSION["loggedUser"]) ? $_SESSION["loggedUser"]->user_id : 2;
+
 		$this->form_validation->set_rules(
 			'owner_name', 'Owner Name',
 			'required',
@@ -112,6 +114,8 @@ class Vendor extends CI_Controller {
 				"terms_conditions" => $_POST["terms_conditions"] ?? null,
 				"role_id" => 2,
 				"password_string" => $password,
+				"created_by" => $loggedUser,
+				"updated_by" => $loggedUser,
 				"created_at" =>date('Y-m-d H:i:s', time()), 
 				"updated_at" =>date('Y-m-d H:i:s', time()), 
 			];
@@ -136,6 +140,8 @@ class Vendor extends CI_Controller {
 	//function to update vender
 	public function updateVendor()
 	{
+		$loggedUser = isset($_SESSION["loggedUser"]) ? $_SESSION["loggedUser"]->user_id : 2;
+
 		$userId = $_POST["user_id"];
 
 		if($_FILES["firm_address"]["tmp_name"] != "") {
@@ -188,6 +194,7 @@ class Vendor extends CI_Controller {
 			"gst_card" => isset($gst_path) ?  $gst_path : $user->gst_card,
 			"canceled_cheque" => isset($canceled_cheque_path) ?  : $user->canceled_cheque ,
 			"terms_conditions" => $_POST["terms_conditions"] ?? null,
+			"updated_by" => $loggedUser,
 			"updated_at" =>date('Y-m-d H:i:s', time()), 
 		];
 

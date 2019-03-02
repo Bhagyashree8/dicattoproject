@@ -30,117 +30,235 @@ padding-left: 21px;
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Dicatto</title>        
-		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>assets/home/images/favicon.png">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url();?>assets/home/images/favicon.png">
         
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/home/css/assets/bootstrap.css">
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/home/css/assets/bootstrap.css">
         
         <!-- Font Awesome Icon -->
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/home/css/assets/font-awesome.min.css">
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/home/css/assets/font-awesome.min.css">
         
         <!-- Owl Carousel CSS -->
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/home/css/assets/owl.carousel.css">
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/home/css/assets/owl.transitions.css">
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/home/css/assets/owl.carousel.css">
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/home/css/assets/owl.transitions.css">
         
         <!-- Animate CSS -->
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/home/css/assets/animate.css">
-		
-		<!-- Google Web Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Exo:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/home/css/assets/animate.css">
+        
+        <!-- Google Web Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Exo:300,400,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
      
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/home/css/normalize.css">
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/home/css/style.css">
-		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/home/css/assets/responsive.css">
-        <script src="js/vendor/modernizr-3.3.1.min.js"></script>
-		
-		<!-- Color Switcher -->
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/home/css/switcher.core.min.css">
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/home/css/switcher.helper.css">
-		<link id="main-style" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/styles/blue.css">
-		
-		
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/home/css/normalize.css">
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/home/css/style.css">
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/home/css/assets/responsive.css">
+        <script src="<?php echo base_url();?>assets/home/js/vendor/modernizr-3.3.1.min.js"></script>
+        
+        <!-- Color Switcher -->
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/home/css/switcher.core.min.css">
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/home/css/switcher.helper.css">
+        
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            <script src="js/assets/respond.min.js"></script>
+        <![endif]-->
     </head>
 <body>
 <!-- Preloader -->
-<div id="preloader">
+<!-- <div id="preloader">
     <div id="status">&nbsp;</div>
-</div>
+</div> -->
 <!-- =========================
      HEADER SECTION
      ========================= -->
 <header id="intro">
-	<nav class="navbar" id="main-nav">
-	  <div class="container">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#rx-navbar-collapse" aria-expanded="false">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		  </button>
-                <img src="<?php echo base_url(); ?>assets/home/images/dicattologo.png" class="img-responsive logohome" alt="">		
+    <nav class="navbar" id="main-nav">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#rx-navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                <img src="<?php echo base_url();?>assets/home/images/dicattologo.png" class="img-responsive logohome" alt="">       
         </div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="rx-navbar-collapse">
-		  <ul class="nav navbar-nav pull-right">
-			<li><a data-scroll href="#intro">Home</a></li>
-			<li><a data-scroll href="#app-features">About Us</a></li>
-			<!-- <li><a data-scroll href="#screenshots">Screenshoot</a></li>
-			<li><a data-scroll href="#pricing-plan">Pricing</a></li>
-			<li><a data-scroll href="#app-download">Download</a></li> -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="rx-navbar-collapse">
+          <ul class="nav navbar-nav pull-right">
+            <li><a data-scroll href="#intro">Home</a></li>
+            <li><a data-scroll href="#app-features">About Us</a></li>
+            <li><a data-scroll href="#callCareer">Career</a></li>
             <li><a data-scroll href="#contact">Contact</a></li>
-            <?php 
-                if(isset($_SESSION["loggedUser"])) {
-                ?>
-                <li style="list-style-type: none;"><a data-scroll href="<?php echo site_url()."Login/logout"; ?>">Hi <?php echo $_SESSION["loggedUser"]->name; ?>,Logout</a></li>
-                    
-                <?php
-                }  else {
-                ?>
-                    <li><a data-scroll href="<?php echo site_url()."Admin/login"; ?>">Login</a></li>
-                <?php
-                }
-            ?>
-            
-		  </ul>
-		</div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
-	</nav>
+            <li><a data-scroll href="#vendor_register">Vender Registration</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
     <!-- =========================
             Intro 
         ========================== -->
     <section>
-        <div class="container">
-            <div class="row">
+        <div class="container-fluid home-main" style="padding: 15px 0px 0px 0px;">
+            
+                <!-- <div class="col-md-12 featured-center wow zoomIn" data-wow-duration="1.5s" data-wow-delay=".3s"> -->
+                <img src="<?php echo base_url();?>assets/home/images/mainslider.png" class="img-responsive" alt="app-o2">
+            
+               
+            
+        </div>
+    </section>
+
+</header><!-- /END HEADER -->
+
+<!-- =========================
+    Pricing Plan
+    ========================== -->
+<section class="pricing-plan" >
+    <div class="container">
+        <div class="row">
+            
+            <div class="pricing-wrapper text-center">
+                <div class="row">
+                    <div class="col-sm-3 no-padding wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".3s">
+                        <div class="description-images">
+                        <img src="<?php echo base_url();?>assets/home/images/business.png">
+                        </div>
+                       <h4 class="description-titale">Digital Inclusiveness</h4>
+                       <p>Attractive consumer centric services and deals</p>
+
+                        
+                    </div>
+                    <div class="col-sm-3 no-padding wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s">
+                        <div class="description-images">
+                        <img class="descriptionimg text-center" src="<?php echo base_url();?>assets/home/images/consumer.png">
+                        </div>
+                       <h4 class="description-titale">Bottom-up approach</h4>
+                       <p>Strong local seller and consumer network</p>
+                    </div>
+               
+                  
+                    <div class="col-sm-3 no-padding wow fadeInRight" data-wow-duration="1.5s" data-wow-delay=".3s">
+                        <div class="description-images">
+                        <img class="" src="<?php echo base_url();?>assets/home/images/gift.png">
+                        </div>
+                       <h4 class="description-titale">Options</h4>
+                       <p>Giving preference to the consumer habits and shopping choices</p>
+                    </div>
+
+                     <div class="col-sm-3 no-padding wow fadeInRight" data-wow-duration="1.5s" data-wow-delay=".3s">
+                        <div class="description-images">
+                        <img src="<?php echo base_url();?>assets/home/images/customer.png">
+                        </div>
+                        <h4 class="description-titale">Sustainability</h4>
+                        <p>Providing various retail products and digital services</p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <section>
+        <div class="container-fluid" style="padding-top: 25px;padding-bottom: 25px;">
+            <div class="">
                 <div class="col-md-12 featured-center wow zoomIn" data-wow-duration="1.5s" data-wow-delay=".3s">
-                <img src="<?php echo base_url(); ?>assets/home/images/slider.png" class="img-responsive" alt="app-o2">
+                <img src="<?php echo base_url();?>assets/home/images/slider1.png" class="img-responsive" alt="app-o2">
              </div>
                
             </div>
         </div>
     </section>
 
-</header><!-- /END HEADER -->
+
 
 
 
 <!-- =========================
         FEATURES
     ========================== -->
-<!-- <section id="app-features">
+<section class="pricing-plan">
     <div class="container">
-    <div class="col-md-12 featured-center wow zoomIn" data-wow-duration="1.5s" data-wow-delay=".3s">
-                <img src="images/slider.png" class="img-responsive" alt="app-o2">
-    </div>
-    </div>
-</section> -->
+        <div class="row">
+            <div class="col-md-12 heading">
+                <h2 class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">Why dicatto?</h2>
+            </div>
+            <div class="row">
 
-<!-- <section id="app-features">
+              <div class="col-sm-6 text-center whydis"> 
+              <div class="box"> 
+                <img src="<?php echo base_url();?>assets/home/images/growwithus.jpg" width="450" height="350">
+                <div class="whytitale1 text-center">
+                <h4>Grow with us</h4> 
+                </div> 
+                  <div class="overbox">
+                    <div class="title overtext"> </div>
+                    <div class="tagline overtext">Present Funding $10 million with 1 million customer base, roadmap to grow pan India in few years </div>
+                  </div>
+              </div>
+
+              </div>
+
+               <div class="col-sm-6 text-center whydis"> 
+              <div class="box"> 
+                <img src="<?php echo base_url();?>assets/home/images/ahead-of-the-competition.jpg"  width="450" height="350">
+                <div class="whytitale2 text-center">
+                <h4>Ahead of the competition</h4> 
+                </div> 
+                  <div class="overbox">
+                    <div class="title overtext"> </div>
+                    <div class="tagline overtext">Giving the best offers and multitude products to our customers  </div>
+                  </div>
+              </div>
+
+              </div>
+
+                </div>
+            <div class="row dis-row">
+              <div class="col-sm-6 text-center whydis"> 
+              <div class="box"> 
+                <img src="<?php echo base_url();?>assets/home/images/buying-preferences.jpg" width="450" height="350">
+                <div class="whytital3 text-center">
+                <h4>Buying Preferences</h4> 
+                </div> 
+                  <div class="overbox">
+                    <div class="title overtext"> </div>
+                    <div class="tagline overtext modif">Digital choices yet, physical touch </div>
+                  </div>
+              </div>
+
+              </div>
+
+
+               <div class="col-sm-6 text-center whydis"> 
+              <div class="box"> 
+                <img src="<?php echo base_url();?>assets/home/images/faster-logistic-services.jpg" width="450" height="350">
+                <div class="whytital4 text-center">
+                <h4>Faster Logistic Services</h4> 
+                </div> 
+                  <div class="overbox">
+                    <div class="title overtext"> </div>
+                    <div class="tagline overtext">Long and crisscrossed network of local sellers</div>
+                  </div>
+              </div>
+
+              </div>
+
+              </div>
+                
+            
+            
+        </div>
+    </div>
+    </div>
+</section>
+<!-- 
+<section id="app-features">
     <div class="container">
         
         <div class="row">
@@ -252,11 +370,9 @@ padding-left: 21px;
     <div class="container">
         <div class="row">
             <div class="col-sm-5 col-sm-12 ad-mobiles text-center">
-                <!-- <div class="ad-frame-one wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s">
-                    <img src="images/mobile02.png" alt="">
-                </div> -->
+              
                 <div class="ad-frame-two wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".4s">
-                    <img src="<?php echo base_url(); ?>assets/home/images/screen.png" alt="">
+                    <img src="<?php echo base_url();?>assets/home/images/screen.png" alt="">
                 </div>
             </div>
             <div class="col-sm-7 col-sm-12">
@@ -272,8 +388,37 @@ padding-left: 21px;
                     <li>Platform for physical products and digital services</li>
                     </ul>
 
+                    <p class="about-text">
+                        Dicatto is about digital empowerment to the general consumers. It aims attractive consumer-centric services and deals thereby bringing digital inclusiveness of general consumer. diactto promotes “bottom-up” approach of a strong local sellers and consumer network, thereby bringing sustainability in the ever-dynamic consumer market. At dicatto, we want to give value added service to our esteemed customers. We envision to grow as pan India company (by building up a sustainable ecosystem) in next few years.
+                    </p>
+
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<section class="Team" id="callCareer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading">
+                <h2 class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">Career</h2>
+            </div>
+            <div class="col-sm-12 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                <h3 class="text-center" style="padding-bottom: 18px;">Join Our Team</h3>
+            </div>
+            <div class="Career-dis text-left wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                <p>We are bunch of young, energetic, creative and dynamic minded people. We are excited and enthused about what we do. We are passionate and focused about our goal.</p>
+                <p>We are looking for excellent, dedicated people who are self-motivated about business development and relationship development roles.</p>
+                <p>Our company is envisioned to grow exceptionally fast thereby, providing people associated to grow faster.</p>
+                <p>We promise for excellent CTC and incentives.</p>
+                <p><b>Positions available</b></p>
+                <p><b>Customer Relationship Manager :</b> We are looking for people fluent in English for Customer Relationship Manager. Graduates can apply here. For job description and CTC email us.</p>
+                <p><b>Business Development Managers :</b> We are looking for street-smart MBA graduates for the role of Business Development Manager. Graduates can apply here. For Job description and CTC email us.</p>
+            </div>
+
+
+            
         </div>
     </div>
 </section>
@@ -282,11 +427,11 @@ padding-left: 21px;
 
 <section class="contact1 text-center">
     <div class="container">
-   <div class="col-md-12 heading">
+   <div class="col-md-12 heading" style="margin-bottom: 0px;">
                 <h2 class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">Coming Soon</h2>
                
             </div>
-  <ul class="count">
+  <ul class="count wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
     <li><span id="days"></span>days</li>
     <li><span id="hours"></span>Hours</li>
     <li><span id="minutes"></span>Minutes</li>
@@ -371,9 +516,9 @@ padding-left: 21px;
             </div>
         </div>
     </div>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-12 screenshots wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".5s">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 screenshots wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".5s">
                 <div id="screenshot-carousel" class="owl-carousel">
                     <div><img src="images/screen01.png" alt=""></div>
                     <div><img src="images/screen02.png" alt=""></div>
@@ -402,106 +547,12 @@ padding-left: 21px;
                     <div><img src="images/screen04.png" alt=""></div>
                 </div>
             </div>
-		</div>
-	</div>
-</section> -->
-
-
-<!-- =========================
-    Pricing Plan
-    ========================== -->
-<!-- <section class="pricing-plan" id="pricing-plan">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 heading">
-                <h2 class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">Our Pricing Plan</h2>
-                <p class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">Lorem ipsum dolor sit amet consectetur adipiscing elit Etiam at ipsum at ligula vestibulum sodales Sed luctus orci vel nibh aliquam laoreet Aenean accumsan </p>
-            </div>
-            <div class="pricing-wrapper">
-                <div class="row">
-                    <div class="col-sm-4 no-padding wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".3s">
-                        <div class="plan-single f-plan">
-                            <div class="pricing-header">
-                                <h4>Basic</h4>
-                                <p>For Freelancer</p>
-                            </div>
-                            <div class="price">
-                                <p>
-                                    <sup class="currency">$</sup>
-                                    49
-                                    <sub class="duration">month</sub>
-                                </p>
-                            </div>
-                            <div class="pricing-content">
-                                <ul class="list-unstyled">
-                                    <li>Total User <span>15</span></li>
-                                    <li>Unlimited Styles <span><i class="fa fa-check"></i></span></li>
-                                    <li>Advanced Protection <span><i class="fa fa-check"></i></span></li>
-                                    <li>Cloud Storage <span><i class="fa fa-close"></i></span></li>
-                                    <li>Backup Service <span><i class="fa fa-close"></i></span></li>
-                                    <li>24/7 Customer Service <span><i class="fa fa-close"></i></span></li>
-                                </ul>
-                                <p><a href="#" class="choose-plan-btn">Choose Plan</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 no-padding wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
-                        <div class="plan-single featured-plan">
-                            <div class="pricing-header">
-                                <h4>Recommended</h4>
-                                <p>For Professionals</p>
-                            </div>
-                            <div class="price">
-                                <p>
-                                    <sup class="currency">$</sup>
-                                    149
-                                    <sub class="duration">month</sub>
-                                </p>
-                            </div>
-                            <div class="pricing-content">
-                                <ul class="list-unstyled">
-                                    <li>Total User <span>100</span></li>
-                                    <li>Unlimited Styles <span><i class="fa fa-check"></i></span></li>
-                                    <li>Advanced Protection <span><i class="fa fa-check"></i></span></li>
-                                    <li>Cloud Storage <span><i class="fa fa-close"></i></span></li>
-                                    <li>Backup Service <span><i class="fa fa-close"></i></span></li>
-                                    <li>24/7 Customer Service <span><i class="fa fa-check"></i></span></li>
-                                </ul>
-                                <p><a href="#" class="choose-plan-btn">Choose Plan</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 no-padding wow fadeInRight" data-wow-duration="1.5s" data-wow-delay=".3s">
-                        <div class="plan-single t-plan">
-                            <div class="pricing-header">
-                                <h4>Advanced</h4>
-                                <p>For Company</p>
-                            </div>
-                            <div class="price">
-                                <p>
-                                    <sup class="currency">$</sup>
-                                    449
-                                    <sub class="duration">month</sub>
-                                </p>
-                            </div>
-                            <div class="pricing-content">
-                                <ul class="list-unstyled">
-                                    <li>Total User <span>500</span></li>
-                                    <li>Unlimited Styles <span><i class="fa fa-check"></i></span></li>
-                                    <li>Advanced Protection <span><i class="fa fa-check"></i></span></li>
-                                    <li>Cloud Storage <span><i class="fa fa-check"></i></span></li>
-                                    <li>Backup Service <span><i class="fa fa-check"></i></span></li>
-                                    <li>24/7 Customer Service <span><i class="fa fa-check"></i></span></li>
-                                </ul>
-                                <p><a href="#" class="choose-plan-btn">Choose Plan</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section> -->
+
+
+
 
 
 <!-- =========================
@@ -517,7 +568,7 @@ padding-left: 21px;
                 <form id="mc-form">
                     <input type="email" id="mc-email" placeholder="Your Email">
                     <input type="submit" value="Subscribe">
-					<label for="mc-email"></label>
+                    <label for="mc-email"></label>
                 </form>
             </div>
         </div>
@@ -639,7 +690,7 @@ padding-left: 21px;
                 <h2 class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">Contact Us</h2>
                
             </div>
-            <div class="col-sm-12 col-md-4 text-center fadeInUp">
+            <div class="col-sm-12 col-md-4 text-center wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".3s">
                 <img src="<?php echo base_url();?>assets/home/images/contact.png" width="120" class="fadeInUp">        
                 <h3 class="fadeInUp">+91 9112234515</h3>
                  <h3 class="fadeInUpl">admin@dicatto.com</h3>
@@ -665,12 +716,63 @@ padding-left: 21px;
                         </div>
                     </div>
                 </form>
-				<div id="form-messages"></div>
+                <div id="form-messages"></div>
             </div><!-- Ends Contact Form -->
         </div> 
     </div>
 </section>
 
+
+<!-- =========================
+    Vendor Registration
+    ========================== -->
+<section class="contact" id="vendor_register">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-12 heading">
+                <h2 class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">Contact Us</h2>
+               
+            </div>
+           <!--  <div class="col-sm-12 col-md-4 text-center wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".3s">
+                <img src="<?php echo base_url();?>assets/home/images/contact.png" width="120" class="fadeInUp">        
+                <h3 class="fadeInUp">+91 9112234515</h3>
+                 <h3 class="fadeInUpl">admin@dicatto.com</h3>
+                
+                
+            </div> -->
+            <div class="col-sm-12 col-md-12 contact-form">
+                <form id="ajax-contact" method="post" action="">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                                <input type="text" placeholder="Your Name" id="name" name="name" required>
+                            </div>
+                            <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                                <input type="email" placeholder="Your Email" id="email" name="email" required>
+                            </div>
+                            <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                                <label>GST Number</label>
+                                <input type="file" placeholder="Your Email" id="email" name="email" required>
+                            </div>
+                            <div class="col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                                <label>GST Number</label>
+                                <input type="file" placeholder="Your Email" id="email" name="email" required>
+                            </div>
+                            <div class="col-sm-12 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".6s">
+                                <textarea placeholder="Message" id="message" name="message" required></textarea>
+                            </div>
+                            <div class="col-sm-12 form-btn wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".9s">
+                                <button type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div id="form-messages"></div>
+            </div><!-- Ends Contact Form -->
+        </div> 
+    </div>
+</section>
 
 
 <!-- =========================
@@ -683,11 +785,10 @@ padding-left: 21px;
                 <h4 class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">dicatto</h4>
                 <p class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".4s">Copyright &copy;  2019 - All rights reserved</p>
                 <ul class="list-unstyled wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".6s">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://www.facebook.com/dicatto-1177704499057460/"  target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/dicattoindia/" target="_blank"><i class="fa fa-instagram"></i></a></li>               
+                    <li><a href="https://www.linkedin.com/company/dicatto/about/"  target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://twitter.com/dicatto1"  target="_blank"><i class="fa fa-twitter"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -695,36 +796,36 @@ padding-left: 21px;
 </footer><!-- /END FOOTER SECTION -->
 
 
-	<!-- =========================
-			SCRIPTS 
-	============================== -->
+    <!-- =========================
+            SCRIPTS 
+    ============================== -->
     <!-- jQuery Library -->
-    <!-- <script src="../../../../../code.jquery.com/jquery-1.12.0.min.js"></script> -->
-    <script>window.jQuery || document.write('<script src="<?php echo base_url(); ?>assets/home/js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+    <script src="<?php echo base_url();?>assets/home/js/vendor/code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="<?php echo base_url();?>assets/home/js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
     <!-- Bootstrap JS -->
-    <script src="<?php echo base_url(); ?>assets/home/js/assets/bootstrap.min.js"></script>
+    <script src="<?php echo base_url();?>assets/home/js/assets/bootstrap.min.js"></script>
     <!-- Owl Carousel JS -->
-    <script src="<?php echo base_url(); ?>assets/home/js/assets/owl.carousel.min.js"></script>
+    <script src="<?php echo base_url();?>assets/home/js/assets/owl.carousel.min.js"></script>
     <!-- WOW Js -->
-    <script src="<?php echo base_url(); ?>assets/home/js/assets/wow.min.js"></script>
+    <script src="<?php echo base_url();?>assets/home/js/assets/wow.min.js"></script>
     <!-- Sticky JS -->
-    <script src="<?php echo base_url(); ?>assets/home/js/assets/jquery.sticky.js"></script>
+    <script src="<?php echo base_url();?>assets/home/js/assets/jquery.sticky.js"></script>
     <!-- Smooth Scrool -->
-    <script src="<?php echo base_url(); ?>assets/home/js/assets/smooth-scroll.js"></script>
+    <script src="<?php echo base_url();?>assets/home/js/assets/smooth-scroll.js"></script>
     <!-- AjaxChimp JS -->
-    <script src="<?php echo base_url(); ?>assets/home/js/assets/jquery.ajaxchimp.js"></script>
-	<!-- Mail JS -->
-	<script src="<?php echo base_url(); ?>assets/home/js/mail.js"></script>
+    <script src="<?php echo base_url();?>assets/home/js/assets/jquery.ajaxchimp.js"></script>
+    <!-- Mail JS -->
+    <script src="<?php echo base_url();?>assets/home/js/mail.js"></script>
     <!-- Color Switcher -->
-    <script src="<?php echo base_url(); ?>assets/home/js/base.js"></script>
-    <script src="<?php echo base_url(); ?>assets/home/js/jquery.cookie.js"></script>
-    <script src="<?php echo base_url(); ?>assets/home/js/switcher.core.js"></script>
-    <script src="<?php echo base_url(); ?>assets/home/js/switcher.helper.js"></script>
-    <script src="<?php echo base_url(); ?>assets/home/js/switcher.load.js"></script>
+    <script src="<?php echo base_url();?>assets/home/js/base.js"></script>
+    <script src="<?php echo base_url();?>assets/home/js/jquery.cookie.js"></script>
+    <script src="<?php echo base_url();?>assets/home/js/switcher.core.js"></script>
+    <script src="<?php echo base_url();?>assets/home/js/switcher.helper.js"></script>
+    <script src="<?php echo base_url();?>assets/home/js/switcher.load.js"></script>
     <!-- Custom JS -->
-    <script src="<?php echo base_url(); ?>assets/home/js/plugins.js"></script>
-    <script src="<?php echo base_url(); ?>assets/home/js/function.js"></script>
-	
+    <script src="<?php echo base_url();?>assets/home/js/plugins.js"></script>
+    <script src="<?php echo base_url();?>assets/home/js/function.js"></script>
+    
     
     </body>
 

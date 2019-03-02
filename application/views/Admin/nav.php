@@ -31,7 +31,7 @@
     <label for="profile2" class="profile-dropdown">
       <input type="checkbox" id="profile2">
 <!--       <img src="https://cdn0.iconfinder.com/data/icons/avatars-3/512/avatar_hipster_guy-512.png">
- -->      <span style="padding-top: 17px;"><?php echo $_SESSION['loggedUser']->name; ?></span>
+ -->      <span style="padding-top: 17px;"><?php echo isset($_SESSION['loggedUser']) ? $_SESSION['loggedUser']->name : "NA"; ?></span>
       <label for="profile2"><i class="mdi mdi-menu"></i></label>
       <ul>
         <li><a href="<?php echo site_url()."Login/logout"; ?>"><i class="mdi mdi-logout"></i>Logout</a></li>
