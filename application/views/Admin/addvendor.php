@@ -70,13 +70,13 @@
                             <div class="form-group">
                               <label class="control-label text-primary font-12">Owner Name</label>
                               <div>
-                                <input type="text" class="form-control font-14"  placeholder="Owner Name">
+                                <input type="text" class="form-control font-14"  placeholder="Owner Name" name="owner_name">
                               </div>
                             </div>
                             <div class="form-group">
                               <label class="control-label text-primary font-12">Firm Name</label>
                               <div>
-                                <input type="text" class="form-control font-14"  placeholder="Firm Name">
+                                <input type="text" class="form-control font-14"  placeholder="Firm Name" name="firm_name">
                               </div>
                             </div>
                           </div>
@@ -87,14 +87,14 @@
                               <div class="col-md-6 col-xs-12">
                                 <label class="control-label">Mobile Number</label>
                                 <div>
-                                  <input type="number" class="form-control font-14"  placeholder="Mobile Number">
+                                  <input type="number" class="form-control font-14"  placeholder="Mobile Number" name="contact">
                                 </div>
                               </div>
 
                               <div class="col-md-6 col-xs-12">
                                 <label class="control-label font-14">Email Id</label>
                                 <div>
-                                  <input type="Email" class="form-control font-14"  placeholder="Email Id">
+                                  <input type="Email" class="form-control font-14"  placeholder="Email Id" name="email"> 
                                 </div>
                               </div>
                               
@@ -116,7 +116,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Firm Address</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="../assets/vendors/dropify/src/images/test-image-1.jpg" />
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" />
                                 </div>
                             </div>
                           </div>
@@ -125,7 +125,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Aadhar Card</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="../assets/vendors/dropify/src/images/test-image-1.jpg" />
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" />
                                 </div>
                             </div>
                           </div>
@@ -133,7 +133,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">GST Number</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="../assets/vendors/dropify/src/images/test-image-1.jpg" />
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" />
                                 </div>
                             </div>
                           </div>
@@ -145,7 +145,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Pan Number</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="../assets/vendors/dropify/src/images/test-image-1.jpg" />
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" />
                                 </div>
                             </div>
                           </div>
@@ -154,7 +154,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Firm Pan Number</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="../assets/vendors/dropify/src/images/test-image-1.jpg" />
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" />
                                 </div>
                             </div>
                           </div>
@@ -162,7 +162,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Cancelled Cheque</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="../assets/vendors/dropify/src/images/test-image-1.jpg" />
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" />
                                 </div>
                             </div>
                           </div>
@@ -174,7 +174,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Upload Picture</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="../assets/vendors/dropify/src/images/test-image-1.jpg" />
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" />
                                 </div>
                             </div>
                           </div>
