@@ -93,6 +93,19 @@ padding-left: 21px;
 			<li><a data-scroll href="#pricing-plan">Pricing</a></li>
 			<li><a data-scroll href="#app-download">Download</a></li> -->
             <li><a data-scroll href="#contact">Contact</a></li>
+            <?php 
+                if(isset($_SESSION["loggedUser"])) {
+                ?>
+                <li style="list-style-type: none;"><a data-scroll href="<?php echo site_url()."Login/logout"; ?>">Hi <?php echo $_SESSION["loggedUser"]->name; ?>,Logout</a></li>
+                    
+                <?php
+                }  else {
+                ?>
+                    <li><a data-scroll href="<?php echo site_url()."Admin/login"; ?>">Login</a></li>
+                <?php
+                }
+            ?>
+            
 		  </ul>
 		</div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
