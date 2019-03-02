@@ -39,7 +39,7 @@
           <div class="col-lg-12 col-md-12">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title mb-20 mt-0 align-self-center">Add new Product</h5>
+                <h5 class="card-title mb-20 mt-0 align-self-center">Add New Vendor</h5>
                 <div class="row">
                  
                   <!-- End of product slider -->
@@ -49,15 +49,15 @@
                         <form class="form-horizontal form-group" method="POST" action="<?php echo base_url()."Vendor/registerVendors";?>" enctype="multipart/form-data">
                           <div class="col-sm-12 col-xs-12">
                             <div class="form-group">
-                              <label class="control-label text-primary font-12">Owner Name</label>
+                              <label class="control-label text-primary font-12">Owner Name *</label>
                               <div>
-                                <input type="text" class="form-control font-14"  placeholder="Owner Name" name="owner_name">
+                                <input type="text" class="form-control font-14"  placeholder="Owner Name" name="owner_name" value="<?php echo isset($_POST["owner_name"]) ? $_POST["owner_name"]: "";?>" required>
                               </div>
                             </div>
                             <div class="form-group">
-                              <label class="control-label text-primary font-12">Firm Name</label>
+                              <label class="control-label text-primary font-12">Firm Name *</label>
                               <div>
-                                <input type="text" class="form-control font-14"  placeholder="Firm Name" name="firm_name">
+                                <input type="text" class="form-control font-14"  placeholder="Firm Name" name="firm_name" value="<?php echo isset($_POST["firm_name"]) ? $_POST["firm_name"]: "";?>" required>
                               </div>
                             </div>
                           </div>
@@ -66,29 +66,33 @@
                           <div class="form-group">
                             <div class="row m-0">
                               <div class="col-md-6 col-xs-12">
-                                <label class="control-label">Mobile Number</label>
+                                <label class="control-label">Mobile Number *</label>
                                 <div>
-                                  <input type="text" class="form-control font-14"  placeholder="Mobile Number" name="contact">
+                                  <input type="text" class="form-control font-14"  placeholder="Mobile Number" name="contact" value="<?php echo isset($_POST["contact"]) ? $_POST["contact"]: "";?>" required>
                                 </div>
                               </div>
 
                               <div class="col-md-6 col-xs-12">
-                                <label class="control-label font-14">Email Id</label>
+                                <label class="control-label font-14">Email ID *</label>
                                 <div>
-                                  <input type="Email" class="form-control font-14"  placeholder="Email Id" name="email"> 
+                                  <input type="email" class="form-control font-14"  placeholder="Email Id" name="email" value="<?php echo isset($_POST["email"]) ? $_POST["email"]: "";?>" required> 
+                                  <strong style="color:red; "> <?php echo form_error('email'); ?></strong>
                                 </div>
                               </div>
                             </div>
+                        </div>
+                            
+
                               
-                              
-                                
                                   <div class="form-group">
-                                    <div class="col-sm-6 col-xs-6">
-                                    <label class="control-label text-primary font-12">Location</label>
+                                    <div class="row m-0">
+                                    <div class="col-sm-6 col-xs-12">
+                                    <label class="control-label text-primary font-12">Location *</label>
                                     <div>
-                                      <input type="text" class="form-control font-14" placeholder="Location" name="location">
+                                      <input type="text" class="form-control font-14" placeholder="Location" name="location" value="<?php  echo isset($_POST["location"]) ? $_POST["location"]: "";?>" required>
                                     </div>
                                   </div>
+                                </div>
                                 </div>
                               
                             
@@ -98,8 +102,8 @@
                           <div class="col-lg-4 col-md-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Firm Address</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="firm_address" />
+                                    <h4 class="card-title">Firm Address *</h4>
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="firm_address"  required/>
                                 </div>
                             </div>
                           </div>
@@ -107,16 +111,16 @@
                           <div class="col-lg-4 col-md-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Aadhar Card</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="uid_card" />
+                                    <h4 class="card-title">Aadhar Card *</h4>
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="uid_card"  required/>
                                 </div>
                             </div>
                           </div>
                           <div class="col-lg-4 col-md-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">GST Number</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="gst_card" />
+                                    <h4 class="card-title">GST Number *</h4>
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="gst_card"  required/>
                                 </div>
                             </div>
                           </div>
@@ -127,8 +131,8 @@
                           <div class="col-lg-4 col-md-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Pan Number</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="pan_card" />
+                                    <h4 class="card-title">Pan Number *</h4>
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="pan_card"  required/>
                                 </div>
                             </div>
                           </div>
@@ -136,16 +140,16 @@
                           <div class="col-lg-4 col-md-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Firm Pan Number</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="firm_pan_card" />
+                                    <h4 class="card-title">Firm Pan Number *</h4>
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="firm_pan_card"  required/>
                                 </div>
                             </div>
                           </div>
                           <div class="col-lg-4 col-md-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Cancelled Cheque</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="canceled_cheque" />
+                                    <h4 class="card-title">Cancelled Cheque *</h4>
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="canceled_cheque"  required/>
                                 </div>
                             </div>
                           </div>
@@ -156,8 +160,8 @@
                         <div class="col-lg-4 col-md-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Upload Picture</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="uploaded_picture" />
+                                    <h4 class="card-title">Upload Picture *</h4>
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="uploaded_picture"  required/>
                                 </div>
                             </div>
                           </div>

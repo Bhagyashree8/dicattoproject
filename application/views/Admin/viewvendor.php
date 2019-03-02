@@ -79,18 +79,27 @@
                                 </div>
                               </div>
                             </div>
-                              
+                            </div>  
                               
                                 
                                   <div class="form-group">
+                                     <div class="row m-0">
                                     <div class="col-sm-6 col-xs-6">
                                     <label class="control-label text-primary font-12">Location</label>
                                     <div>
                                       <input type="text" class="form-control font-14" placeholder="Location" value="<?php echo $vendor->location; ?>" name="location">
                                     </div>
                                   </div>
+                                
+                                    <div class="col-sm-6 col-xs-6">
+                                    <label class="control-label text-primary font-12">Password</label>
+                                    <div>
+                                      <!-- <input type="text" class="form-control font-14" placeholder="Password" value="<?php echo $vendor->password; ?>" name="password"> -->
+                                      <label><?php echo $vendor->password_string ?? "NA"; ?></label>
+                                    </div>
+                                  </div>
                                 </div>
-                              
+                              </div>
                             
                           
                           <div class="form-group">
