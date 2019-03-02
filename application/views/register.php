@@ -166,12 +166,14 @@ padding-left: 21px;
                                     <div class="form-group">
                                     <label>Mobile Number *</label><span class="required" style="color:red;"> * </span>
                                       <input type="text" class="form-control border-input" placeholder="Contact Number" name="contact" value="<?php echo isset($_POST["contact"]) ? $_POST["contact"] : ""?>" required>
+                                      <strong style="color:red; "> <?php echo form_error('contact'); ?></strong>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                     <label>Email *</label><span class="required" style="color:red;"> * </span>
                                       <input type="text" class="form-control border-input" placeholder="Email" name="email" value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ""?>" required>
+                                      <strong style="color:red; "> <?php echo form_error('email'); ?></strong>
                                     </div>
                                 </div>
                             </div>
@@ -184,7 +186,7 @@ padding-left: 21px;
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                    <label>Firm Address </label><span class="required" style="color:red;"> * </span>
+                                    <label>Firm Address </label>
                                         <input type="file" class="form-control border-input txtuppercase" placeholder="Firm Address" name="firm_address">
                                     </div>
                                 </div>
@@ -193,13 +195,13 @@ padding-left: 21px;
                             <div class="row" >                        
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                    <label>Aadhar Card </label><span class="required" style="color:red;"> * </span>
+                                    <label>Aadhar Card </label>
                                         <input type="file" class="form-control border-input txtuppercase" placeholder="Firm Address" name="uid_card">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                    <label>GST Number </label><span class="required" style="color:red;"> * </span>
+                                    <label>GST Number </label>
                                         <input type="file" class="form-control border-input txtuppercase" placeholder="Firm Address" name="gst_card">
                                     </div>
                                 </div>                    
@@ -208,13 +210,13 @@ padding-left: 21px;
                             <div class="row" >                        
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                    <label>Pan Number </label><span class="required" style="color:red;"> * </span>
+                                    <label>Pan Number </label>
                                         <input type="file" class="form-control border-input txtuppercase" placeholder="Pan Number" name="pan_card">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                    <label>Firm Pan Number </label><span class="required" style="color:red;"> * </span>
+                                    <label>Firm Pan Number </label>
                                         <input type="file" class="form-control border-input txtuppercase" placeholder="Firm Pan Number" name="firm_pan_card">
                                     </div>
                                 </div>                    
@@ -224,13 +226,13 @@ padding-left: 21px;
                             <div class="row" >                        
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                    <label>Cancelled Cheque </label><span class="required" style="color:red;"> * </span>
+                                    <label>Cancelled Cheque </label>
                                         <input type="file" class="form-control border-input txtuppercase" placeholder="Cancelled Cheque" name="canceled_cheque">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                    <label>Upload Picture </label><span class="required" style="color:red;"> * </span>
+                                    <label>Upload Picture </label>
                                         <input type="file" class="form-control border-input txtuppercase" placeholder="Upload Picture" name="uploaded_picture">
                                     </div>
                                 </div>                    

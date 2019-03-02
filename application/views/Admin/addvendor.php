@@ -80,6 +80,7 @@
                                 <label class="control-label">Mobile Number *</label>
                                 <div>
                                   <input type="text" class="form-control font-14"  placeholder="Mobile Number" name="contact" value="<?php echo isset($_POST["contact"]) ? $_POST["contact"]: "";?>" required>
+                                  <strong style="color:red; "> <?php echo form_error('contact'); ?></strong>
                                 </div>
                               </div>
 
@@ -114,7 +115,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Firm Address *</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="firm_address"  required/>
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="firm_address"/>
                                 </div>
                             </div>
                           </div>
@@ -123,7 +124,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Aadhar Card *</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="uid_card"  required/>
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="uid_card"/>
                                 </div>
                             </div>
                           </div>
@@ -131,7 +132,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">GST Number *</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="gst_card"  required/>
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="gst_card"/>
                                 </div>
                             </div>
                           </div>
@@ -143,7 +144,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Pan Number *</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="pan_card"  required/>
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="pan_card"/>
                                 </div>
                             </div>
                           </div>
@@ -152,7 +153,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Firm Pan Number *</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="firm_pan_card"  required/>
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="firm_pan_card"/>
                                 </div>
                             </div>
                           </div>
@@ -160,7 +161,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Cancelled Cheque *</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="canceled_cheque"  required/>
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="canceled_cheque"/>
                                 </div>
                             </div>
                           </div>
@@ -172,7 +173,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Upload Picture *</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="uploaded_picture"  required/>
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" name="uploaded_picture"/>
                                 </div>
                             </div>
                           </div>

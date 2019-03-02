@@ -32,7 +32,6 @@
 	public function insert($input)
 	{
 		$this->load->dbforge();
-
 		return $this->db->insert('users',$input);
 	}
 
