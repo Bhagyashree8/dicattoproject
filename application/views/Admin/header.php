@@ -10,6 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url();?>assets/images/favicon.png">
+
     <title>Dicatto</title>
 
     <link href="<?php echo base_url();?>assets/vendors/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
@@ -20,8 +21,7 @@
     <link href="<?php echo base_url();?>assets/vendors/c3-master/c3.min.css" rel="stylesheet">
     
     <!-- flot css -->
-    <link href="css/pages/float-chart.css" rel="stylesheet">
-     <link href="<?php echo base_url();?>/assets/vendors/summernote/dist/summernote.css" rel="stylesheet" />
+    <link href="<?php echo base_url();?>main/css/pages/float-chart.css" rel="stylesheet">
 
     <!--Toaster Popup message CSS -->
     <link href="<?php echo base_url();?>assets/vendors/toast-master/css/jquery.toast.css" rel="stylesheet">
@@ -29,28 +29,18 @@
     <link href="<?php echo base_url();?>main/css/master-stylesheet.css" rel="stylesheet">
     <!-- You can change the theme colors from here -->
     <link href="<?php echo base_url();?>main/css/colors/default.css" id="theme" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
 
 
-    <!-- Bootstrap Core CSS -->
-     <link rel="stylesheet" href="<?php echo base_url();?>assets/vendors/dropify/dist/css/dropify.min.css">
-    <link href="<?php echo base_url();?>assets/vendors/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" rel="stylesheet" />
-<link href="<?php echo base_url();?>assets/vendors/bootstrap-switch/bootstrap-switch.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="<?php echo base_url();?>css/master-stylesheet.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../assets/vendors/product-slider/product-slider.css">
-  <!-- Dashboard 1 Page CSS -->
-    <link href="<?php echo base_url();?>css/pages/dashboard2.css" rel="stylesheet">
-    <!-- You can change the theme colors from here -->
- 
 </head>
-
                 
-    <!-- ============================================================== -->
-    <script src="<?php echo base_url();?>assets/vendors/jquery/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
+     
+  <script src="<?php echo base_url();?>assets/vendors/jquery/jquery.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
     <script src="<?php echo base_url();?>assets/vendors/bootstrap/js/popper.min.js"></script>
     <script src="<?php echo base_url();?>assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+    
+    
     <!-- slimscrollbar scrollbar JavaScript -->
     <script src="<?php echo base_url();?>assets/vendors/ps/perfect-scrollbar.jquery.min.js"></script>
     <!--Wave Effects -->
@@ -58,11 +48,26 @@
     <!--Menu sidebar -->
     <script src="<?php echo base_url();?>main/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
-    <script src="<?php echo base_url();?>mainjs/custom.min.js"></script>
-    <!-- Footable -->
-    <script src="<?php echo base_url();?>assets/vendors/footable/js/footable.all.min.js"></script>
-    <!--FooTable init-->
-    <script src="<?php echo base_url();?>main/js/footable-init.js"></script>
+    <script src="<?php echo base_url();?>main/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!--morris JavaScript -->
+    <script src="<?php echo base_url();?>assets/vendors/raphael/raphael-min.js"></script>
+    <script src="<?php echo base_url();?>assets/vendors/morrisjs/morris.min.js"></script>
+    <!--c3 JavaScript -->
+    <script src="<?php echo base_url();?>assets/vendors/d3/d3.min.js"></script>
+    <script src="<?php echo base_url();?>assets/vendors/c3-master/c3.min.js"></script>
+    <!-- Popup message jquery -->
+    <script src="<?php echo base_url();?>assets/vendors/toast-master/js/jquery.toast.js"></script>
+    
+
+    <!--Sparkline JavaScript -->
+    <script src="<?php echo base_url();?>assets/vendors/sparkline/jquery.sparkline.min.js"></script>
+
+    
+    <!-- Chart JS -->
+    <script src="<?php echo base_url();?>main/js/dashboard1.js"></script>
     <!-- ============================================================== -->
     <!-- Style switcher -->
     <!-- ============================================================== -->

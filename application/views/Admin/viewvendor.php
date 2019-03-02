@@ -22,7 +22,7 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">Add Vendor</h3>
+                        <h3 class="text-themecolor">View Vendor</h3>
                      
                     </div>
                    
@@ -39,7 +39,7 @@
           <div class="col-lg-12 col-md-12">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title mb-20 mt-0 align-self-center">Add new Product</h5>
+                
                 <div class="row">
                  
                   <!-- End of product slider -->
@@ -51,13 +51,13 @@
                             <div class="form-group">
                               <label class="control-label text-primary font-12">Owner Name</label>
                               <div>
-                                <input type="text" class="form-control font-14"  placeholder="Owner Name" name="owner_name">
+                                <input type="text" class="form-control font-14"  placeholder="Owner Name">
                               </div>
                             </div>
                             <div class="form-group">
                               <label class="control-label text-primary font-12">Firm Name</label>
                               <div>
-                                <input type="text" class="form-control font-14"  placeholder="Firm Name" name="firm_name">
+                                <input type="text" class="form-control font-14"  placeholder="Firm Name">
                               </div>
                             </div>
                           </div>
@@ -68,14 +68,14 @@
                               <div class="col-md-6 col-xs-12">
                                 <label class="control-label">Mobile Number</label>
                                 <div>
-                                  <input type="number" class="form-control font-14"  placeholder="Mobile Number" name="contact">
+                                  <input type="number" class="form-control font-14"  placeholder="Mobile Number">
                                 </div>
                               </div>
 
                               <div class="col-md-6 col-xs-12">
                                 <label class="control-label font-14">Email Id</label>
                                 <div>
-                                  <input type="Email" class="form-control font-14"  placeholder="Email Id" name="email"> 
+                                  <input type="Email" class="form-control font-14"  placeholder="Email Id">
                                 </div>
                               </div>
                             </div>
@@ -99,7 +99,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Firm Address</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" />
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="../assets/vendors/dropify/src/images/test-image-1.jpg" />
                                 </div>
                             </div>
                           </div>
@@ -108,7 +108,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Aadhar Card</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" />
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="../assets/vendors/dropify/src/images/test-image-1.jpg" />
                                 </div>
                             </div>
                           </div>
@@ -116,7 +116,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">GST Number</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" />
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="../assets/vendors/dropify/src/images/test-image-1.jpg" />
                                 </div>
                             </div>
                           </div>
@@ -128,7 +128,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Pan Number</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" />
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="../assets/vendors/dropify/src/images/test-image-1.jpg" />
                                 </div>
                             </div>
                           </div>
@@ -137,7 +137,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Firm Pan Number</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" />
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="../assets/vendors/dropify/src/images/test-image-1.jpg" />
                                 </div>
                             </div>
                           </div>
@@ -145,7 +145,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Cancelled Cheque</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" />
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="../assets/vendors/dropify/src/images/test-image-1.jpg" />
                                 </div>
                             </div>
                           </div>
@@ -157,7 +157,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Upload Picture</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="" />
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="../assets/vendors/dropify/src/images/test-image-1.jpg" />
                                 </div>
                             </div>
                           </div>
