@@ -50,14 +50,14 @@
                                     <table id=""  class="table mt-30 table-hover contact-list" data-page-size="10">
                                         <thead>
                                             <tr>
-                                                <th>No</th>
-                                                <th>Owner Name</th>
-                                                <th>Firm Name</th>
-                                                <th>Email</th>
-                                                <th>Phone</th>
-                                                <th>Location</th>
-                                                <th class="">Action</th>
-                                                <th class="">Action</th>
+                                                <th><b>Sr.No</b></th>
+                                                <th><b>Owner Name</b></th>
+                                                <th><b>Firm Name</b></th>
+                                                <th><b>Email</b></th>
+                                                <th><b>Phone</b></th>
+                                                <th><b>Location</b></th>
+                                                <th><b>Edit</b></th>
+                                                <th><b>Delete</b></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -89,6 +89,10 @@
                                                         <?php
                                                         $i++;
                                                     }
+                                                } else {
+                                                ?>
+                                                    No Records found
+                                                <?php
                                                 }
                                             ?>                                            
                                         </tbody>

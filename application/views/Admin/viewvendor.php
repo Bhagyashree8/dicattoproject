@@ -117,7 +117,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Aadhar Card</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="<?php echo file_exists($vendor->uid_card) ? base_url().$vendor->uid_card : ""; ?>" name="uid_card" />
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="<?php echo file_exists($vendor->uid_card) ? base_url().$vendor->uid_card : ""; ?>" name="uid_card"/>
                                 </div>
                             </div>
                           </div>

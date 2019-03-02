@@ -138,6 +138,10 @@ class Vendor extends CI_Controller {
 	{
 		$userId = $_POST["user_id"];
 
+		if($_FILES["firm_address"]["tmp_name"] != "") {
+			$file_input_name = "firm_address";
+			$firm_address_img = $this->User_model->move_image($_FILES["firm_address"], 'images/users/',$file_input_name);
+		} 
 
 		if($_FILES["uid_card"]["tmp_name"] != "") {
 			$file_input_name = "uid_card";
@@ -176,6 +180,7 @@ class Vendor extends CI_Controller {
 			"mobile" => $_POST["contact"] ?? null,
 			"location" => $_POST["location"] ?? null,
 			"firm_address" => $_POST["firm_address"] ?? null,
+			"firm_address_img" => isset($firm_address_img) ?  $firm_address_img: $user->firm_address_img,
 			"uid_card" => isset($uid_path) ?  $uid_path: $user->uid_card,
 			"uploaded_picture" => isset($picture_path) ? $picture_path  : $user->uploaded_picture,
 			"pan_card" => isset($pan_path) ? $pan_path : $user->pan_card,

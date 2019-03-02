@@ -38,6 +38,16 @@
    
 
     <section id="wrapper">
+        <?php 
+            if(isset($_SESSION["error"])) {
+                ?>
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="margin-right: 25px;"><span aria-hidden="true">&times;</span></button>
+                        <h5><?php echo $this->session->flashdata('error'); ?></h5>
+                       </div>
+                <?php
+            }
+        ?>
         <div class="login-register" style="background-image:url(<?php echo base_url();?>/assets/images/background/login-register.jpg);">
         <!--     <div class="logo-page" style="text-align: center;padding-bottom: 10px;"> <img src="<?php echo base_url();?>/assets/images/logo2.png">    </div> -->
 
@@ -49,10 +59,12 @@
                         <div class="form-group ">
                             <div class="col-xs-12">
                                 <input class="form-control" type="text" required="" name="email" placeholder="username"> </div>
+                                <strong style="color:red; "> <?php echo form_error('email'); ?></strong>
                         </div>
                         <div class="form-group">
                             <div class="col-xs-12">
                                 <input class="form-control" type="password" required="" name="password" placeholder="password"> </div>
+                                <strong style="color:red; "> <?php echo form_error('password'); ?></strong>
                         </div>
                         <div class="form-group row">
 <!--
