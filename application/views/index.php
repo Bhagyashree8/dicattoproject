@@ -1,4 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 <style type="text/css">
@@ -38,12 +39,15 @@ width: 250px!important;
         <meta name="description" content="">
         <meta name="keywords" content="">
 <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
-        <title>Dicatto</title>        
+        <title>dicatto</title>        
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url();?>assets/home/images/favicon.png">
         
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="<?php echo base_url();?>assets/home/css/assets/bootstrap.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
         
         <!-- Font Awesome Icon -->
         <link rel="stylesheet" href="<?php echo base_url();?>assets/home/css/assets/font-awesome.min.css">
@@ -105,12 +109,15 @@ width: 250px!important;
             <li><a data-scroll href="#callCareer">Career</a></li>
             <li><a data-scroll href="#contact">Contact</a></li>
             <li><a data-scroll href="<?php echo base_url();?>Admin/register">Register</a></li>
+       
+
+            
+
           </ul>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-
 
     <!-- =========================
             Intro 
@@ -179,6 +186,9 @@ width: 250px!important;
 
    <section>
         <div class="container" style="padding-top: 25px;padding-bottom: 25px;">
+             <div class="col-md-12 heading">
+                <h2 class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">How It Works</h2>
+            </div>
             <div class="">
                 <div class="col-md-12 featured-center wow zoomIn" data-wow-duration="1.5s" data-wow-delay=".3s">
                 <img src="<?php echo base_url();?>assets/home/images/slider1.png" class="img-responsive" alt="app-o2">
@@ -192,9 +202,6 @@ width: 250px!important;
 
 
 
-<!-- =========================
-        FEATURES
-    ========================== -->
 
 <!-- 
 <section id="app-features">
@@ -336,7 +343,9 @@ width: 250px!important;
         </div>
     </div>
 </section>
-
+<!-- =========================
+        FEATURES
+    ========================== -->
 <section class="pricing-plan">
     <div class="container">
         <div class="row">
@@ -736,11 +745,6 @@ width: 250px!important;
         </div> 
     </div>
 </section>
-
-
-<!-- =========================
-    Vendor Registration
-    ========================== -->
 
 
 
