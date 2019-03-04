@@ -217,7 +217,8 @@
                             <div class="col-md-6 text-right pr-30">
                               <div class="5">
                                 <button type="submit" class="btn waves-effect waves-light btn-primary">Save</button>
-                                <button type="button" class="btn waves-effect waves-light btn-outline-default">Cancel</button>
+                                <a href="<?php echo site_url()."Admin/vendors"?>" class="btn waves-effect waves-light btn-outline-default" style="background-color: #dfdede;">Cancel </a>
+                                <!-- <button type="button" class="btn waves-effect waves-light btn-outline-default">Cancel</button> -->
                               </div>
                             </div>
                           </div>
