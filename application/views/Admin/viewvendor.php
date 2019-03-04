@@ -17,6 +17,17 @@
             <!-- Container fluid  -->
             <!-- ============================================================== -->
             <div class="container-fluid">
+              <?php if($this->session->flashdata('success')) { ?>
+              <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="margin-right: 25px;"><span aria-hidden="true">&times;</span></button>
+                <h5><?php echo $this->session->flashdata('success'); ?></h5>
+              </div>
+               <?php } else if($this->session->flashdata('error')){?>
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="margin-right: 25px;"><span aria-hidden="true">&times;</span></button>
+                <h5><?php echo $this->session->flashdata('error'); ?></h5>
+               </div>
+            <?php }?>
                 <!-- ============================================================== -->
                 <!-- Bread crumb and right sidebar toggle -->
                 <!-- ============================================================== -->
@@ -52,12 +63,14 @@
                               <label class="control-label text-primary font-12">Owner Name</label>
                               <div>
                                 <input type="text" class="form-control font-14"  placeholder="Owner Name" value="<?php echo $vendor->owner_name; ?>" name="owner_name">
+                                <strong style="color:red; "> <?php echo form_error('owner_name'); ?></strong>
                               </div>
                             </div>
                             <div class="form-group">
                               <label class="control-label text-primary font-12">Firm Name</label>
                               <div>
                                 <input type="text" class="form-control font-14"  placeholder="Firm Name" value="<?php echo $vendor->firm_name; ?>" name="firm_name">
+                                <strong style="color:red; "> <?php echo form_error('firm_name'); ?></strong>
                               </div>
                             </div>
                           </div>
@@ -69,6 +82,7 @@
                                 <label class="control-label">Mobile Number</label>
                                 <div>
                                   <input type="text" class="form-control font-14"  placeholder="Mobile Number" value="<?php echo $vendor->mobile; ?>" name="contact">
+                                  <strong style="color:red; "> <?php echo form_error('contact'); ?></strong>
                                 </div>
                               </div>
 
@@ -76,6 +90,7 @@
                                 <label class="control-label font-14">Email Id</label>
                                 <div>
                                   <input type="Email" class="form-control font-14"  placeholder="Email Id" value="<?php echo $vendor->email; ?>" name="email"> 
+                                  <strong style="color:red; "> <?php echo form_error('email'); ?></strong>
                                 </div>
                               </div>
                             </div>
@@ -88,6 +103,7 @@
                                     <label class="control-label text-primary font-12">Location</label>
                                     <div>
                                       <input type="text" class="form-control font-14" placeholder="Location" value="<?php echo $vendor->location; ?>" name="location">
+                                      <strong style="color:red; "> <?php echo form_error('location'); ?></strong>
                                     </div>
                                   </div>
                                 
