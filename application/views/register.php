@@ -27,8 +27,8 @@ padding-left: 21px;
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="description" content="">
         <meta name="keywords" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Dicatto</title>        
+        <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>dicatto</title>        
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url();?>assets/home/images/favicon.png">
         
@@ -368,5 +368,4 @@ let countDown = new Date('April 6, 2019 00:00:00').getTime(),
            margin: 0px; 
         }
     }
-
 </style>
