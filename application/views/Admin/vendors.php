@@ -83,7 +83,7 @@
                                                                 </td>
 
                                                                 <td class="text-center">
-                                                                    <a href="<?php echo site_url()."Vendor/deleteVendor/".$vendor->user_id; ?>"><i class="fa fa-trash text-danger text-danger"></i></a>
+                                                                    <a href="<?php echo site_url()."Vendor/deleteVendor/".$vendor->user_id; ?>" class="delete"><i class="fa fa-trash text-danger text-danger"></i></a>
                                                                 </td>
                                                             </tr>
                                                         <?php
@@ -118,6 +118,9 @@
 
 </html>
 
+<script type="text/javascript">
+    
+</script>
 
 <!-- <script type="text/javascript">
     $(function() {
