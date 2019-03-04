@@ -175,7 +175,7 @@ padding-left: 21px;
                                 <div class="col-md-6">
                                     <div class="form-group">
                                     <label>Email *</label><span class="required" style="color:red;"> * </span>
-                                      <input type="text" class="form-control border-input" placeholder="Email" name="email" value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ""?>" required>
+                                      <input type="email" class="form-control border-input" placeholder="Email" name="email" value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ""?>" required>
                                       <strong style="color:red; "> <?php echo form_error('email'); ?></strong>
                                     </div>
                                 </div>

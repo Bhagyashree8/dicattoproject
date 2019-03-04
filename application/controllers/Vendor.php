@@ -90,20 +90,26 @@ class Vendor extends CI_Controller {
 			$result = $this->file_check($_FILES["firm_address"], "firm_address");
 		}
 
-		if(isset($result)) {
 
-			if($result == FALSE) {
+		if(isset($result) && $result == FALSE) {
+			$this->session->set_flashdata("error", "Documents should be in JPEG/PNG/GIF format");
+			redirect($_SERVER['HTTP_REFERER']);
+		}
 
-				$this->session->set_flashdata("error", "Documents should be in JPEG/PNG/GIF format");
+		if($this->form_validation->run() == FALSE) {
+
+			if(isset($_SESSION["loggedUser"])) {
 
 				if($_SESSION["loggedUser"]->role_id == 1) {
 
 					$this->load->view('Admin/addvendor');
-				} else {
-					$this->load->view('register');
-				}
+				} 	
+			}
+			else {
+				$this->load->view('register');
 			}
 		}
+
 		// if(isset($_FILES["uid_card"]["tmp_name"]) ) { 
 		// 	$this->form_validation->set_rules('uid_card', 'Adhar Card', 'callback_file_check');
 		// }
@@ -129,17 +135,10 @@ class Vendor extends CI_Controller {
 		// }
 
 		// exit();
-		if ($this->form_validation->run() == FALSE) {
-
-			if($loggedUser->role_id == 1) {
-				$this->load->view('Admin/addvendor');
-			} else {
-				$this->load->view('register');
-			}
 
 			// $this->load->view('Admin/addvendor');
 
-		} else {
+		else {
 
 			if(isset($_FILES["firm_address"]["tmp_name"]) ) {
 			$file_input_name = "firm_address";
@@ -211,6 +210,7 @@ class Vendor extends CI_Controller {
 				$this->session->set_flashdata("error", "Sorry!! Vender not added");
 			}
 
+			exit();
 			if(isset($_SESSION["loggedUser"])) {
 				redirect('Admin/addvendor', 'refresh');
 			} else {
