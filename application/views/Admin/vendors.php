@@ -78,7 +78,7 @@
                                                                 <td><?php echo $vendor->location ?? "NA"; ?></td>
 
                                                                 <td class="text-center">
-                                                                    <a href="<?php echo site_url()."Vendor/updateVendor/".$vendor->user_id; ?>"><i class="fa fa-pencil text-primary"></i>
+                                                                    <a href="<?php echo site_url()."Admin/viewvendor/".$vendor->user_id; ?>"><i class="fa fa-pencil text-primary"></i>
                                                                     </a>
                                                                 </td>
 
