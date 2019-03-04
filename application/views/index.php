@@ -38,7 +38,7 @@ width: 250px!important;
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="description" content="">
         <meta name="keywords" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
         <title>Dicatto</title>        
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url();?>assets/home/images/favicon.png">
@@ -105,7 +105,7 @@ width: 250px!important;
             <li><a data-scroll href="#app-features">About Us</a></li>
             <li><a data-scroll href="#callCareer">Career</a></li>
             <li><a data-scroll href="#contact">Contact</a></li>
-            <li><a data-scroll href="#">Register</a></li>
+            <li><a data-scroll href="<?php echo base_url();?>Admin/register">Register</a></li>
        
 
             
@@ -733,8 +733,8 @@ width: 250px!important;
                         </div>
                     </div>
                 </form>
-                <div id="form-messages"></div>
-            </div><!-- Ends Contact Form -->
+<!--                 <div id="form-messages"></div>
+ -->            </div><!-- Ends Contact Form -->
         </div> 
     </div>
 </section>
