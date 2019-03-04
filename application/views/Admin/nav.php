@@ -18,9 +18,9 @@
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
                          <!-- dark Logo text -->
-                         <img src="<?php echo base_url();?>assets/images/dicattologo.png" alt="homepage" class="dark-logo" height="70" width="200" />
+                         <!-- <img src="<?php echo base_url();?>assets/images/dicattologo.png" alt="homepage" class="dark-logo" height="70" width="200" /> -->
                          <!-- Light Logo text -->    
-                         <img src="<?php echo base_url();?>assets/images/dicattologo.png" class="light-logo" alt="homepage" height="70" width="200" /></span> </a>
+                         <a href="<?php echo site_url(); ?>"><img src="<?php echo base_url();?>assets/images/dicattologo.png" class="light-logo" alt="homepage" height="70" width="200" /></span> </a>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
@@ -30,11 +30,11 @@
                 <div class="half">
     <label for="profile2" class="profile-dropdown">
       <input type="checkbox" id="profile2">
-      <img src="https://cdn0.iconfinder.com/data/icons/avatars-3/512/avatar_hipster_guy-512.png">
-      <span>John Doe</span>
+<!--       <img src="https://cdn0.iconfinder.com/data/icons/avatars-3/512/avatar_hipster_guy-512.png">
+ -->      <span style="padding-top: 17px;"><?php echo isset($_SESSION['loggedUser']) ? $_SESSION['loggedUser']->name : "NA"; ?></span>
       <label for="profile2"><i class="mdi mdi-menu"></i></label>
       <ul>
-        <li><a href="#"><i class="mdi mdi-logout"></i>Logout</a></li>
+        <li><a href="<?php echo site_url()."Login/logout"; ?>"><i class="mdi mdi-logout"></i>Logout</a></li>
       </ul>
     </label>
   </div>
@@ -116,12 +116,12 @@
 }
 .profile-dropdown span {
   display: inline-block;
-  vertical-align: sub;
-  width: 125px;
-  margin-right: 2rem;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+    vertical-align: sub;
+    width: 100px;
+    margin-right: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .profile-dropdown ul {
   display: none;

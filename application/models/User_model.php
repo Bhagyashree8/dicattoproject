@@ -32,7 +32,6 @@
 	public function insert($input)
 	{
 		$this->load->dbforge();
-
 		return $this->db->insert('users',$input);
 	}
 
@@ -106,6 +105,7 @@
     {
         $this->db->select("*")
         ->where("role_id", 2)
+        ->order_by("user_id","DESC")
         ->from("users");
 
         $query = $this->db->get();

@@ -91,11 +91,11 @@ padding-left: 21px;
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="rx-navbar-collapse">
           <ul class="nav navbar-nav pull-right">
-            <li><a data-scroll href="#intro">Home</a></li>
-            <li><a data-scroll href="#app-features">About Us</a></li>
-            <li><a data-scroll href="#callCareer">Career</a></li>
-            <li><a data-scroll href="#contact">Contact</a></li>
-            <li><a data-scroll href="register">Register User</a></li>
+            <li><a data-scroll href="<?php echo base_url();?>#intro">Home</a></li>
+            <li><a data-scroll href="<?php echo base_url();?>#app-features">About Us</a></li>
+            <li><a data-scroll href="<?php echo base_url();?>#callCareer">Career</a></li>
+            <li><a data-scroll href="<?php echo base_url();?>#contact">Contact</a></li>
+            <li><a data-scroll href="<?php echo site_url();?>Admin/register">Register</a></li>
 
 
             
@@ -119,9 +119,21 @@ padding-left: 21px;
     <body>
         <section class="pricing-plan">
     <div class="container">
+        <?php if($this->session->flashdata('success')) { ?>
+          <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="margin-right: 25px;"><span aria-hidden="true">&times;</span></button>
+            <h5><?php echo $this->session->flashdata('success'); ?></h5>
+          </div>
+           <?php } else if($this->session->flashdata('error')){?>
+            <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="margin-right: 25px;"><span aria-hidden="true">&times;</span></button>
+            <h5><?php echo $this->session->flashdata('error'); ?></h5>
+           </div>
+        <?php }?>
+
         <div class="row">
             <div class="col-md-12 heading">
-                <h2 class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">Register User</h2>
+                <h2 class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">Register</h2>
             </div>
             <div class="row">
 
@@ -132,172 +144,116 @@ padding-left: 21px;
                         <h4 class="title pricingbox text-center"></h4>
                     </div>  -->
                 <div class="card">
-                    <div class="content">
-                   
-                          <div class="row" > 
-                             <div class="col-md-3">
-                                <div class="form-group">
-                                <label>Date</label><span class="required" style="color:red;"> * </span>
-                                    <input type="date"  max="2999-12-31" name="date" class="form-control border-input datepicker" placeholder="Date" value="<?php echo date('Y-m-d');?>" required>
-                                
+                    <form class="form-group" method="POST" action="<?php echo base_url()."Vendor/registerVendors";?>" enctype="multipart/form-data">
+                        <div class="content">
+                            <div class="row" >                        
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                    <label>Owner Name</label><span class="required" style="color:red;"> * </span>
+                                        <input type="text" class="form-control border-input" placeholder="Owner Name" name="owner_name" value="<?php echo isset($_POST["owner_name"]) ? $_POST["owner_name"] : ""?>" required>
+                                    
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                    <label>Firm Name *</label><span class="required" style="color:red;"> * </span>
+                                        <input type="text" class="form-control border-input" placeholder="Firm Name" name="firm_name" value="<?php echo isset($_POST["firm_name"]) ? $_POST["firm_name"] : ""?>" required>
+                                    
+                                    </div>
+                                </div>
+                                 
+                            
+                            </div>
+                            <div class="row" >                        
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                    <label>Mobile Number *</label><span class="required" style="color:red;"> * </span>
+                                      <input type="text" class="form-control border-input" placeholder="Contact Number" name="contact" value="<?php echo isset($_POST["contact"]) ? $_POST["contact"] : ""?>" required>
+                                      <strong style="color:red; "> <?php echo form_error('contact'); ?></strong>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                    <label>Email *</label><span class="required" style="color:red;"> * </span>
+                                      <input type="text" class="form-control border-input" placeholder="Email" name="email" value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ""?>" required>
+                                      <strong style="color:red; "> <?php echo form_error('email'); ?></strong>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row" >                        
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                <label>Name</label><span class="required" style="color:red;"> * </span>
-                                    <input type="text" class="form-control border-input" placeholder="Name" name="name" value="" required>
-                                
+                            <div class="row" >                        
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                    <label>Location</label><span class="required" style="color:red;"> * </span>
+                                        <input type="text" class="form-control border-input phoneInput" placeholder="Pincode" name="location" value="<?php echo isset($_POST["location"]) ? $_POST["location"] : ""?>" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                    <label>Firm Address </label>
+                                        <input type="file" class="form-control border-input txtuppercase" placeholder="Firm Address" name="firm_address">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                <label>SurName</label><span class="required" style="color:red;"> * </span>
-                                    <input type="text" class="form-control border-input" placeholder="SurName" name="mothername" value="" required>
-                                
+
+                            <div class="row" >                        
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                    <label>Aadhar Card </label>
+                                        <input type="file" class="form-control border-input txtuppercase" placeholder="Firm Address" name="uid_card">
+                                    </div>
                                 </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                    <label>GST Number </label>
+                                        <input type="file" class="form-control border-input txtuppercase" placeholder="Firm Address" name="gst_card">
+                                    </div>
+                                </div>                    
                             </div>
-                             <div class="col-md-4">
-                                <div class="form-group">
-                                <label>Father Name</label><span class="required" style="color:red;"> * </span>
-                                    <input type="text" class="form-control border-input" placeholder="Father Name" name="fathername" value="" required>
-                                
+
+                            <div class="row" >                        
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                    <label>Pan Number </label>
+                                        <input type="file" class="form-control border-input txtuppercase" placeholder="Pan Number" name="pan_card">
+                                    </div>
                                 </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                    <label>Firm Pan Number </label>
+                                        <input type="file" class="form-control border-input txtuppercase" placeholder="Firm Pan Number" name="firm_pan_card">
+                                    </div>
+                                </div>                    
                             </div>
-                        
-                        </div>
-                        <div class="row" >                        
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                <label>Full Address</label><span class="required" style="color:red;"> * </span>
-                                  <textarea rows=2 class="form-control border-input UserName_field" placeholder="Home Address" name="address"></textarea>
+
+
+                            <div class="row" >                        
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                    <label>Cancelled Cheque </label>
+                                        <input type="file" class="form-control border-input txtuppercase" placeholder="Cancelled Cheque" name="canceled_cheque">
+                                    </div>
                                 </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                    <label>Upload Picture </label>
+                                        <input type="file" class="form-control border-input txtuppercase" placeholder="Upload Picture" name="uploaded_picture">
+                                    </div>
+                                </div>                    
                             </div>
-                        </div>
-                        <div class="row" >                        
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                <label>Pincode</label><span class="required" style="color:red;"> * </span>
-                                    <input type="text" class="form-control border-input phoneInput" placeholder="Pincode" name="pincode" value="" required>
-                                </div>
+
+                                                                             
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-info btn-fill btn-wd" name="addDb" id="btnLogin">Submit</button>
                             </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                <label>Pan No.</label><span class="required" style="color:red;"> * </span>
-                                    <input type="text" class="form-control border-input txtuppercase" maxlength="10" minlength="10" placeholder="Pan number" name="pan" value="" required>
-                                </div>
-                            </div>
-                             <div class="col-md-4">
-                                <div class="form-group">
-                                <label>Email</label><span class="required" style="color:red;"> * </span>
-                                    <input type="email" class="form-control border-input" placeholder="Email" name="Email" value="" required>
-                                
-                                </div>
-                            </div>
-                    
-                        </div>
-                        <div class="row" >                        
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                <label>Contact No.</label><span class="required" style="color:red;"> * </span>
-                                    <input type="text" class="form-control border-input phoneInput" maxlength="10" minlength="10" placeholder="Mobile" name="contact" value="" required>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                <label>Alt Contact No.</label><span class="required" style="color:red;"> * </span>
-                                    <input type="text" class="form-control border-input phoneInput" maxlength="10" minlength="10" placeholder="Mobile" name="altcontact" value="" required>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                <label>Date of birth</label><span class="required" style="color:red;"> * </span>
-                                    <input type="date"  max="2999-12-31" name="dob" class="form-control border-input datepicker" placeholder="Date of birth" value="<?php echo date('Y-m-d');?>" required>
-                                
-                                </div>
-                            </div>
-                    
-                        </div>
-                       <div class="row" >
-                          <div class="col-md-4">
-                                <div class="form-group">
-                                <label>Account number</label><span class="required" style="color:red;"> * </span>
-                                    <input type="text" name="Account" class="form-control border-input" placeholder="Account no." value="" required>
-                                </div>
-                          </div>
-                         <div class="col-md-4">
-                                <div class="form-group">
-                                <label>IFSC Code</label><span class="required" style="color:red;"> * </span>
-                                    <input type="text" name="IFSC" class="form-control border-input" placeholder="IFSC Code" value="" required>
-                                </div>
-                            </div>
-                             <div class="col-md-4">
-                                <div class="form-group">
-                                <label>Bank Name</label><span class="required" style="color:red;"> * </span>
-                                    <input type="text" name="Bank" class="form-control border-input" placeholder="Bank name" value="" required>
-                                </div>
-                            </div>
-                        </div>
-                
-                         <div class="row" >                        
-                           <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Agent Name <span class="required" style="color:red;"> * </span></label>
-                                    <select  class="form-control border-input" name="agent" id="agent" required>
-                                        <option value="">--Select Agent--</option>
-                                        <?php foreach($agent as $value):?>
-                                        <option value="<?php echo $value->ID;?>"><?php echo $value->Name;?></option>
-                                        <?php endforeach;?>
-                                    </select>
-                                </div>
-                             </div>
-                             <div class="col-md-6">
-                                <div class="form-group">
-                                <label>Agent ReferenceId</label><span class="required" style="color:red;"> * </span>
-                                    <input type="text" name="reference" id="reference" class="form-control border-input" placeholder="Reference Id" value="" readonly required>
-                                </div>
-                            </div>
-                        </div>
-            
-                  <div class="row" >                        
-                         <div class="col-md-6">
-                                <div class="form-group">
-                                <label>Username</label><span class="required" style="color:red;"> * </span>
-                                    <input type="text" name="username" class="form-control border-input" id="user" onkeyup="Uniquser();" placeholder="Username" value="" required>
-                                    <span id="UserStatus"></span>
-                                </div>
-                            </div>
-                             <div class="col-md-6">
-                                <div class="form-group">
-                                <label>Password</label><span class="required" style="color:red;"> * </span>
-                                    <input type="password" name="password" class="form-control border-input" placeholder="Password" value="" required>
-                                </div>
-                            </div>
-                        </div>
-                      <div class="row" > 
-                        <div class="col-md-6">
-                                <div class="form-group">
-                                <label>Photo</label>
-                                    <input type="file" class="form-control border-input" placeholder="file" name="avatar" value="" >
-                                
-                                </div>
-                            </div>
-                        </div>  
-                                                                         
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-info btn-fill btn-wd" name="addDb" id="btnLogin">Submit</button>
-                        </div>
-                        <div class="clearfix"></div>
-           
-                   </div>
+                            <div class="clearfix"></div>
+               
+                       </div>
+                    </form>
                 </div>
                         
             </div>
      </div>
-   
-        
-                </div>
+                   </div>
                 </div>
             </div>
         </section>
@@ -407,4 +363,10 @@ let countDown = new Date('April 6, 2019 00:00:00').getTime(),
     .pricing-plan .heading{
         margin-bottom:0px;
     }
+    @media only screen and (max-width: 600px){
+        .row{
+           margin: 0px; 
+        }
+    }
+
 </style>

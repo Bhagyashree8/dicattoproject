@@ -1,5 +1,4 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
-
 <!doctype html>
 <html class="no-js" lang="zxx">
 <style type="text/css">
@@ -106,15 +105,12 @@ width: 250px!important;
             <li><a data-scroll href="#callCareer">Career</a></li>
             <li><a data-scroll href="#contact">Contact</a></li>
             <li><a data-scroll href="<?php echo base_url();?>Admin/register">Register</a></li>
-       
-
-            
-
           </ul>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+
 
     <!-- =========================
             Intro 
@@ -199,81 +195,7 @@ width: 250px!important;
 <!-- =========================
         FEATURES
     ========================== -->
-<section class="pricing-plan">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 heading">
-                <h2 class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">Why dicatto?</h2>
-            </div>
-            <div class="row">
 
-              <div class="col-sm-6 text-right whydis"> 
-              <div class="box homebox1"> 
-                <img src="<?php echo base_url();?>assets/home/images/growwithus.jpg" width="450" height="350">
-                <div class="whytitale1 text-center">
-                <h4>Grow with us</h4> 
-                </div> 
-                  <div class="overbox">
-                    <div class="title overtext"> </div>
-                    <div class="tagline overtext">Present Funding $10 million with 1 million customer base, roadmap to grow pan India in few years </div>
-                  </div>
-              </div>
-
-              </div>
-
-               <div class="col-sm-6 text-center whydis"> 
-              <div class="box homebox2"> 
-                <img src="<?php echo base_url();?>assets/home/images/ahead-of-the-competition.jpg"  width="450" height="350">
-                <div class="whytitale2 text-center">
-                <h4>Ahead of the competition</h4> 
-                </div> 
-                  <div class="overbox">
-                    <div class="title overtext"> </div>
-                    <div class="tagline overtext">Giving the best offers and multitude products to our customers  </div>
-                  </div>
-              </div>
-
-              </div>
-
-                </div>
-            <div class="row dis-row">
-              <div class="col-sm-6 text-center whydis"> 
-              <div class="box homebox3"> 
-                <img src="<?php echo base_url();?>assets/home/images/buying-preferences.jpg" width="450" height="350">
-                <div class="whytital3 text-center">
-                <h4>Buying Preferences</h4> 
-                </div> 
-                  <div class="overbox">
-                    <div class="title overtext"> </div>
-                    <div class="tagline overtext modif">Digital choices yet, physical touch </div>
-                  </div>
-              </div>
-
-              </div>
-
-
-               <div class="col-sm-6 text-center whydis"> 
-              <div class="box homebox4"> 
-                <img src="<?php echo base_url();?>assets/home/images/faster-logistic-services.jpg" width="450" height="350">
-                <div class="whytital4 text-center">
-                <h4>Faster Logistic Services</h4> 
-                </div> 
-                  <div class="overbox">
-                    <div class="title overtext"> </div>
-                    <div class="tagline overtext">Long and crisscrossed network of local sellers</div>
-                  </div>
-              </div>
-
-              </div>
-
-              </div>
-                
-            
-            
-        </div>
-    </div>
-    </div>
-</section>
 <!-- 
 <section id="app-features">
     <div class="container">
@@ -412,6 +334,82 @@ width: 250px!important;
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="pricing-plan">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading">
+                <h2 class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">Why dicatto?</h2>
+            </div>
+            <div class="row">
+
+              <div class="col-sm-6 text-right whydis"> 
+              <div class="box homebox1"> 
+                <img src="<?php echo base_url();?>assets/home/images/growwithus.jpg" width="450" height="350">
+                <div class="whytitale1 text-center">
+                <h4>Grow with us</h4> 
+                </div> 
+                  <div class="overbox">
+                    <div class="title overtext"> </div>
+                    <div class="tagline overtext">Present Funding $10 million with 1 million customer base, roadmap to grow pan India in few years </div>
+                  </div>
+              </div>
+
+              </div>
+
+               <div class="col-sm-6 text-center whydis"> 
+              <div class="box homebox2"> 
+                <img src="<?php echo base_url();?>assets/home/images/ahead-of-the-competition.jpg"  width="450" height="350">
+                <div class="whytitale2 text-center">
+                <h4>Ahead of the competition</h4> 
+                </div> 
+                  <div class="overbox">
+                    <div class="title overtext"> </div>
+                    <div class="tagline overtext">Giving the best offers and multitude products to our customers  </div>
+                  </div>
+              </div>
+
+              </div>
+
+                </div>
+            <div class="row dis-row">
+              <div class="col-sm-6 text-center whydis"> 
+              <div class="box homebox3"> 
+                <img src="<?php echo base_url();?>assets/home/images/buying-preferences.jpg" width="450" height="350">
+                <div class="whytital3 text-center">
+                <h4>Buying Preferences</h4> 
+                </div> 
+                  <div class="overbox">
+                    <div class="title overtext"> </div>
+                    <div class="tagline overtext modif">Digital choices yet, physical touch </div>
+                  </div>
+              </div>
+
+              </div>
+
+
+               <div class="col-sm-6 text-center whydis"> 
+              <div class="box homebox4"> 
+                <img src="<?php echo base_url();?>assets/home/images/faster-logistic-services.jpg" width="450" height="350">
+                <div class="whytital4 text-center">
+                <h4>Faster Logistic Services</h4> 
+                </div> 
+                  <div class="overbox">
+                    <div class="title overtext"> </div>
+                    <div class="tagline overtext">Long and crisscrossed network of local sellers</div>
+                  </div>
+              </div>
+
+              </div>
+
+              </div>
+                
+            
+            
+        </div>
+    </div>
     </div>
 </section>
 
@@ -738,6 +736,11 @@ width: 250px!important;
         </div> 
     </div>
 </section>
+
+
+<!-- =========================
+    Vendor Registration
+    ========================== -->
 
 
 

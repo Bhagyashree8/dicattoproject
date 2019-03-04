@@ -79,18 +79,27 @@
                                 </div>
                               </div>
                             </div>
-                              
+                            </div>  
                               
                                 
                                   <div class="form-group">
+                                     <div class="row m-0">
                                     <div class="col-sm-6 col-xs-6">
                                     <label class="control-label text-primary font-12">Location</label>
                                     <div>
                                       <input type="text" class="form-control font-14" placeholder="Location" value="<?php echo $vendor->location; ?>" name="location">
                                     </div>
                                   </div>
+                                
+                                    <div class="col-sm-6 col-xs-6">
+                                    <label class="control-label text-primary font-12">Password</label>
+                                    <div>
+                                      <!-- <input type="text" class="form-control font-14" placeholder="Password" value="<?php echo $vendor->password; ?>" name="password"> -->
+                                      <label><?php echo $vendor->password_string ?? "NA"; ?></label>
+                                    </div>
+                                  </div>
                                 </div>
-                              
+                              </div>
                             
                           
                           <div class="form-group">
@@ -108,7 +117,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Aadhar Card</h4>
-                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="<?php echo file_exists($vendor->uid_card) ? base_url().$vendor->uid_card : ""; ?>" name="uid_card" />
+                                    <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="<?php echo file_exists($vendor->uid_card) ? base_url().$vendor->uid_card : ""; ?>" name="uid_card"/>
                                 </div>
                             </div>
                           </div>

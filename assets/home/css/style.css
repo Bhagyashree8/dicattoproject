@@ -358,7 +358,7 @@ ul.nav a {
 
     background: #fff;
 
-    padding:29px 0px 0px 0px;
+    padding:5px 0px 0px 0px;
 
     -webkit-transition: all 0.3s ease 0s;
 
@@ -2534,8 +2534,8 @@ width: 301px!important;
 }}
 
 @media only screen and (max-width: 600px) {
-..is-sticky .navbar{
-padding: 33px 0px 0px 0px!important;
+.is-sticky .navbar{
+padding: 5px 0px 0px 0px!important;
     }
 .Career-dis{
     text-align: center;

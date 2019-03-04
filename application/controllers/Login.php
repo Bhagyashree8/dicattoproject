@@ -22,14 +22,14 @@ date_default_timezone_set('Asia/Kolkata');
 	     */
 	    public function loginPost(){
 	        $data = array();
-	        if($this->session->userdata('success_msg')){
-	            $data['success_msg'] = $this->session->userdata('success_msg');
-	            $this->session->unset_userdata('success_msg');
-	        }
-	        if($this->session->userdata('error_msg')){
-	            $data['error_msg'] = $this->session->userdata('error_msg');
-	            $this->session->unset_userdata('error_msg');
-	        }
+	        // if($this->session->userdata('success_msg')){
+	        //     $data['success_msg'] = $this->session->userdata('success_msg');
+	        //     $this->session->unset_userdata('success_msg');
+	        // }
+	        // if($this->session->userdata('error_msg')){
+	        //     $data['error_msg'] = $this->session->userdata('error_msg');
+	        //     $this->session->unset_userdata('error_msg');
+	        // }
 
 	            $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
 	            $this->form_validation->set_rules('password', 'password', 'required');
@@ -51,12 +51,13 @@ date_default_timezone_set('Asia/Kolkata');
 	                    redirect('Admin/vendors');
 	                    
 	                }else{
-	                    $data['error_msg'] = 'Wrong email or password, please try again.';
+	                	$this->session->set_flashdata("error","Please enter right Email and Password");
+	                	$this->load->view('Admin/login');
 	                }
+	            } else {
+	            	//load the view
+	        		$this->load->view('Admin/login');
 	            }
-
-	        //load the view
-	        $this->load->view('Admin/login');
 	    }
 
 
