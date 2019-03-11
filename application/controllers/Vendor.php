@@ -24,7 +24,10 @@ class Vendor extends CI_Controller {
 	// function to store data of vendors 
 	public function registerVendors()
 	{
-		$loggedUser = isset($_SESSION["loggedUser"]) ? $_SESSION["loggedUser"] : 2;
+		if(!isset($_SESSION["loggedUser"])) {
+			$logUser = $this->User_model->getUserById(2);
+		}
+		$loggedUser = isset($_SESSION["loggedUser"]) ? $_SESSION["loggedUser"] : $logUser;
 
 		$this->form_validation->set_rules(
 			'owner_name', 'Owner Name',
@@ -87,56 +90,25 @@ class Vendor extends CI_Controller {
 			$result = $this->file_check($_FILES["firm_address"], "firm_address");
 		}
 
-		if(isset($result)) {
 
-			if($result == FALSE) {
+		if(isset($result) && $result == FALSE) {
+			$this->session->set_flashdata("error", "Documents should be in JPEG/PNG/GIF format");
+			redirect($_SERVER['HTTP_REFERER']);
+		}
 
-				$this->session->set_flashdata("error", "Documents should be in JPEG/PNG/GIF format");
+		if($this->form_validation->run() == FALSE) {
+			if(isset($_SESSION["loggedUser"])) {
 
-				if($loggedUser->role_id == 1) {
+				if($_SESSION["loggedUser"]->role_id == 1) {
 
 					$this->load->view('Admin/addvendor');
-				} else {
-					$this->load->view('register');
-				}
+				} 	
 			}
-		}
-		// if(isset($_FILES["uid_card"]["tmp_name"]) ) { 
-		// 	$this->form_validation->set_rules('uid_card', 'Adhar Card', 'callback_file_check');
-		// }
-
-		// if(isset($_FILES["pan_card"]["tmp_name"]) ) { 
-		// 	$this->form_validation->set_rules('pan_card', 'PAN Card', 'callback_file_check');
-		// }
-
-		// if(isset($_FILES["firm_pan_card"]["tmp_name"]) ) { 
-		// 	$this->form_validation->set_rules('firm_pan_card', 'Firm PAN Card', 'callback_file_check');
-		// }
-
-		// if(isset($_FILES["gst_card"]["tmp_name"]) ) {
-		// 	$this->form_validation->set_rules('gst_card', 'GST Document', 'callback_file_check');
-		// }
-
-		// if(isset($_FILES["canceled_cheque"]["tmp_name"]) ) { 
-		// 	$this->form_validation->set_rules('canceled_cheque', 'Canceled Cheque', 'callback_file_check');
-		// }
-
-		// if(isset($_FILES["uploaded_picture"]["tmp_name"]) ) { 
-		// 	$this->form_validation->set_rules('uploaded_picture', 'Picture', 'callback_file_check');
-		// }
-
-		// exit();
-		if ($this->form_validation->run() == FALSE) {
-
-			if($loggedUser->role_id == 1) {
-				$this->load->view('Admin/addvendor');
-			} else {
+			else {
 				$this->load->view('register');
 			}
-
-			// $this->load->view('Admin/addvendor');
-
-		} else {
+		}
+		else {
 
 			if(isset($_FILES["firm_address"]["tmp_name"]) ) {
 			$file_input_name = "firm_address";
@@ -208,7 +180,8 @@ class Vendor extends CI_Controller {
 				$this->session->set_flashdata("error", "Sorry!! Vender not added");
 			}
 
-			if($loggedUser->role_id != 2) {
+			if(isset($_SESSION["loggedUser"])) {
+				
 				redirect('Admin/addvendor', 'refresh');
 			} else {
 				redirect('Admin/register', 'refresh');
@@ -221,6 +194,12 @@ class Vendor extends CI_Controller {
 	//function to update vender
 	public function updateVendor()
 	{
+		$loggedUser = $_SESSION["loggedUser"];
+
+		$userId = $_POST["user_id"];
+
+		$data["vendor"] = $this->User_model->getUserById($userId);
+
 		$this->form_validation->set_rules(
 			'owner_name', 'Owner Name',
 			'required',
@@ -241,71 +220,75 @@ class Vendor extends CI_Controller {
 			'required|regex_match[/^[0-9]{10}$/]',
 			array(
 				'required' => 'Contact number is required',
-				'regex_match' => "Contact Number should be 10 digits"
+				'regex_match' => "Contact Number should be 10 digits and in number format"
 			)
 		);
 		$this->form_validation->set_rules(
 			'email', 'Email',
-			'required|is_unique[users.email]',
+			'required',
 			array(
 				'required' => 'Email is required',
-				'is_unique' => "Email id should be unique"
+				// 'is_unique' => "Email id should be unique"
 			)
 		);
 
-		if(isset($_FILES["uid_card"]["tmp_name"]) ) {
+		if($_FILES["uid_card"]["tmp_name"] != "") {
 			$result = $this->file_check($_FILES["uid_card"], "uid_card");
 		}
 
-		if(isset($_FILES["pan_card"]["tmp_name"]) ) {
+		if($_FILES["pan_card"]["tmp_name"] != "") {
 			$result = $this->file_check($_FILES["pan_card"], "pan_card");
 		}
 
-		if(isset($_FILES["firm_pan_card"]["tmp_name"]) ) {
+		if($_FILES["firm_pan_card"]["tmp_name"] != "") {
 			$result = $this->file_check($_FILES["firm_pan_card"], "firm_pan_card");
 		}
 
-		if(isset($_FILES["gst_card"]["tmp_name"]) ) {
+		if($_FILES["gst_card"]["tmp_name"] != "") {
 			$result = $this->file_check($_FILES["gst_card"], "gst_card");
 		}
 
-		if(isset($_FILES["canceled_cheque"]["tmp_name"]) ) {
+		if($_FILES["canceled_cheque"]["tmp_name"] != "") {
 			$result = $this->file_check($_FILES["canceled_cheque"], "canceled_cheque");
 		}
 
-		if(isset($_FILES["uploaded_picture"]["tmp_name"]) ) {
+		if($_FILES["uploaded_picture"]["tmp_name"] != "") {
 			$result = $this->file_check($_FILES["uploaded_picture"], "uploaded_picture");
 		}
 
-		if(isset($_FILES["firm_address"]["tmp_name"]) ) {
+		if($_FILES["firm_address"]["tmp_name"] != "") {
 			$result = $this->file_check($_FILES["firm_address"], "firm_address");
 		}
 
-		if($result == FALSE) {
+		// var_dump($result, $this->form_validation->run()); exit();
 
+		if(isset($result) && $result == FALSE) {
 			$this->session->set_flashdata("error", "Documents should be in JPEG/PNG/GIF format");
-
-			if($loggedUser->role_id == 1) {
-
-				$this->load->view('Admin/addvendor');
-			} else {
-				$this->load->view('register');
-			}
+			redirect($_SERVER['HTTP_REFERER']);
 		}
-
 
 		if($this->form_validation->run() == FALSE) {
 
 			if($loggedUser->role_id == 1) {
-				$this->load->view('Admin/addvendor');
-			} else {
+
+				$this->load->view('Admin/viewvendor',$data);
+			} 
+			else {
 				$this->load->view('register');
 			}
+		}
 
-		} else {
-				$loggedUser = isset($_SESSION["loggedUser"]) ? $_SESSION["loggedUser"]->user_id : 2;
 
-				$userId = $_POST["user_id"];
+		// if($this->form_validation->run() == FALSE) {
+
+		// 	if($loggedUser->role_id == 1) {
+		// 		$this->load->view('Admin/viewvendor',$data);
+		// 	} else {
+		// 		$this->load->view('register');
+		// 	}
+
+		// } 
+		else {				
 
 				if($_FILES["firm_address"]["tmp_name"] != "") {
 					$file_input_name = "firm_address";

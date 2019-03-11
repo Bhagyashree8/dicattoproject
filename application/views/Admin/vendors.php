@@ -78,12 +78,12 @@
                                                                 <td><?php echo $vendor->location ?? "NA"; ?></td>
 
                                                                 <td class="text-center">
-                                                                    <a href="<?php echo site_url()."Vendor/updateVendor/".$vendor->user_id; ?>"><i class="fa fa-pencil text-primary"></i>
+                                                                    <a href="<?php echo site_url()."Admin/viewvendor/".$vendor->user_id; ?>"><i class="fa fa-pencil text-primary"></i>
                                                                     </a>
                                                                 </td>
 
                                                                 <td class="text-center">
-                                                                    <a href="<?php echo site_url()."Vendor/deleteVendor/".$vendor->user_id; ?>"><i class="fa fa-trash text-danger text-danger"></i></a>
+                                                                    <a href="<?php echo site_url()."Vendor/deleteVendor/".$vendor->user_id; ?>" class="delete"onclick="return confirm('Do you really want to delete this vendor?')"><i class="fa fa-trash text-danger text-danger"></i></a>
                                                                 </td>
                                                             </tr>
                                                         <?php
@@ -118,6 +118,14 @@
 
 </html>
 
+<script type = "text/javascript">
+ <!--
+    function Warn() {
+       confirm ("This is a warning message!");
+       // document.write ("This is a warning message!");
+    }
+ //-->
+</script> 
 
 <!-- <script type="text/javascript">
     $(function() {

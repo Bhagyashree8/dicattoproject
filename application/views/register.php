@@ -29,6 +29,11 @@ padding-left: 21px;
     margin-right: 0px;
     margin-left: 0px;
 }
+}
+
+.error p{
+    color: #f11414;
+}
 </style>
     
 <head>
@@ -167,7 +172,7 @@ padding-left: 21px;
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                    <label>Firm Name *</label><span class="required" style="color:red;"> * </span>
+                                    <label>Firm Name</label><span class="required" style="color:red;"> * </span>
                                         <input type="text" class="form-control border-input" placeholder="Firm Name" name="firm_name" value="<?php echo isset($_POST["firm_name"]) ? $_POST["firm_name"] : ""?>" required>
                                     
                                     </div>
@@ -178,16 +183,16 @@ padding-left: 21px;
                             <div class="row" >                        
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                    <label>Mobile Number *</label><span class="required" style="color:red;"> * </span>
+                                    <label>Mobile Number</label><span class="required" style="color:red;"> * </span>
                                       <input type="text" class="form-control border-input" placeholder="Contact Number" name="contact" value="<?php echo isset($_POST["contact"]) ? $_POST["contact"] : ""?>" required>
-                                      <strong style="color:red; "> <?php echo form_error('contact'); ?></strong>
+                                      <strong class="error"> <?php echo form_error('contact'); ?></strong>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                    <label>Email *</label><span class="required" style="color:red;"> * </span>
+                                    <label>Email</label><span class="required" style="color:red;"> * </span>
                                       <input type="email" class="form-control border-input" placeholder="Email" name="email" value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ""?>" required>
-                                      <strong style="color:red; "> <?php echo form_error('email'); ?></strong>
+                                      <strong class="error"><?php echo form_error('email'); ?></strong>
                                     </div>
                                 </div>
                             </div>
