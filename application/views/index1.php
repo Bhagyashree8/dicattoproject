@@ -99,7 +99,7 @@ width: 250px!important;
             <span class="icon-bar"></span>
           </button>
           <a href="<?php echo base_url();?>">
-                <img src="<?php echo base_url();?>assets/home/images/dicatto-logo.png" class="img-responsive logohome" alt="">
+                <img src="<?php echo base_url();?>assets/home/images/logonew.png" class="img-responsive logohome" alt="">
                 </a>       
         </div>
 

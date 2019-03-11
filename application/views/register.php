@@ -74,7 +74,7 @@ padding-left: 21px;
             <script src="js/assets/respond.min.js"></script>
         <![endif]-->
     </head>
-<body>
+
 <!-- Preloader -->
 <!-- <div id="preloader">
     <div id="status">&nbsp;</div>
@@ -94,7 +94,7 @@ padding-left: 21px;
             <span class="icon-bar"></span>
           </button>
               <a href="<?php echo base_url();?>">
-                <img src="<?php echo base_url();?>assets/home/images/dicatto-logo.png" class="img-responsive logohome" alt="">
+                <img src="<?php echo base_url();?>assets/home/images/logonew.png" class="img-responsive logohome" alt="">
                 </a>       
         </div>     
       
