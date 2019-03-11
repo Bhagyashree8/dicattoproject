@@ -97,7 +97,6 @@ class Vendor extends CI_Controller {
 		}
 
 		if($this->form_validation->run() == FALSE) {
-
 			if(isset($_SESSION["loggedUser"])) {
 
 				if($_SESSION["loggedUser"]->role_id == 1) {
@@ -109,35 +108,6 @@ class Vendor extends CI_Controller {
 				$this->load->view('register');
 			}
 		}
-
-		// if(isset($_FILES["uid_card"]["tmp_name"]) ) { 
-		// 	$this->form_validation->set_rules('uid_card', 'Adhar Card', 'callback_file_check');
-		// }
-
-		// if(isset($_FILES["pan_card"]["tmp_name"]) ) { 
-		// 	$this->form_validation->set_rules('pan_card', 'PAN Card', 'callback_file_check');
-		// }
-
-		// if(isset($_FILES["firm_pan_card"]["tmp_name"]) ) { 
-		// 	$this->form_validation->set_rules('firm_pan_card', 'Firm PAN Card', 'callback_file_check');
-		// }
-
-		// if(isset($_FILES["gst_card"]["tmp_name"]) ) {
-		// 	$this->form_validation->set_rules('gst_card', 'GST Document', 'callback_file_check');
-		// }
-
-		// if(isset($_FILES["canceled_cheque"]["tmp_name"]) ) { 
-		// 	$this->form_validation->set_rules('canceled_cheque', 'Canceled Cheque', 'callback_file_check');
-		// }
-
-		// if(isset($_FILES["uploaded_picture"]["tmp_name"]) ) { 
-		// 	$this->form_validation->set_rules('uploaded_picture', 'Picture', 'callback_file_check');
-		// }
-
-		// exit();
-
-			// $this->load->view('Admin/addvendor');
-
 		else {
 
 			if(isset($_FILES["firm_address"]["tmp_name"]) ) {
@@ -210,8 +180,8 @@ class Vendor extends CI_Controller {
 				$this->session->set_flashdata("error", "Sorry!! Vender not added");
 			}
 
-			exit();
 			if(isset($_SESSION["loggedUser"])) {
+				
 				redirect('Admin/addvendor', 'refresh');
 			} else {
 				redirect('Admin/register', 'refresh');
