@@ -374,8 +374,19 @@ width: 250px!important;
                 <h2 class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">Why dicatto?</h2>
             </div>
             <div class="row">
+                <div class="col-md-4 col-sm-12 col-xs-12 whymaindiv ">
+                        <h4 class="whydivti">Competition to Indian Retailers:<br> 
+                      Online market <br> 
+                        Large Retail<br> 
+                        Regional Retail Chain<br> 
+                        Omnichannel Platforms<br> 
+                     </div> 
 
-              <div class="col-sm-6 text-right whydis"> 
+
+                
+
+               
+              <div class=" col-md-4 col-sm-12 col-xs-12  whydis"> 
               <div class="box homebox1"> 
                 <img src="<?php echo base_url();?>assets/home/images/growwithus.png" class="responsive">
                 <div class="whytitale1 text-center">
@@ -386,11 +397,7 @@ width: 250px!important;
                     <div class="tagline overtext">Present Funding $10 million with 1 million customer base, roadmap to grow pan India in few years </div>
                   </div>
               </div>
-
-              </div>
-
-               <div class="col-sm-6 text-center whydis"> 
-              <div class="box homebox2"> 
+               <div class="box homebox2"> 
                 <img src="<?php echo base_url();?>assets/home/images/ahead-of-the-competition.png" class="responsive"> 
                 <div class="whytitale2 text-center">
                 <h4>Ahead of the competition</h4> 
@@ -400,12 +407,15 @@ width: 250px!important;
                     <div class="tagline overtext">Giving the best offers and multitude products to our customers  </div>
                   </div>
               </div>
+             </div>
 
-              </div>
+              <!--  <div class="hidden-xs col-md-4 col-sm-12 col-xs-12 text-center whydis"> 
+             
 
-                </div>
-            <div class="row dis-row">
-              <div class="col-sm-6 text-center whydis"> 
+              </div> -->
+
+                
+              <div class="col-md-4 col-sm-12 col-xs-12 text-center whydis"> 
               <div class="box homebox3"> 
                 <img src="<?php echo base_url();?>assets/home/images/buying-preferences.png" width="450" height="350">
                 <div class="whytital3 text-center">
@@ -417,11 +427,7 @@ width: 250px!important;
                   </div>
               </div>
 
-              </div>
-
-
-               <div class="col-sm-6 text-center whydis"> 
-              <div class="box homebox4"> 
+               <div class="box homebox4"> 
                 <img src="<?php echo base_url();?>assets/home/images/faster-logistic-services.png" width="450" height="350">
                 <div class="whytital4 text-center">
                 <h4>Faster Logistic Services</h4> 
@@ -434,10 +440,17 @@ width: 250px!important;
 
               </div>
 
+
+              <!--  <div class="hidden-xs col-md-4 col-sm-12 col-xs-12 text-center whydis"> 
+             
+
+              </div> -->
+
               </div>
                 
             
             
+        </div>
         </div>
     </div>
     </div>
