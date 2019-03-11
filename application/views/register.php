@@ -20,6 +20,15 @@ padding-left: 21px;
     margin-left: -43px;
 }
 }
+
+.form-control{
+    height: 40px!important;
+}
+@media only screen and (max-width: 800px) {
+.row{
+    margin-right: 0px;
+    margin-left: 0px;
+}
 </style>
     
 <head>
@@ -27,8 +36,10 @@ padding-left: 21px;
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="description" content="">
         <meta name="keywords" content="">
-        <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
-        <title>dicatto</title>        
+<!--         <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" /> -->
+        <meta name="viewport" content="width=device-width">
+
+        <title>dicatto - India's biggest integrator of retail</title>        
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url();?>assets/home/images/favicon.png">
         
@@ -83,14 +94,14 @@ padding-left: 21px;
             <span class="icon-bar"></span>
           </button>
               <a href="<?php echo base_url();?>">
-                <img src="<?php echo base_url();?>assets/home/images/dicattologo.png" class="img-responsive logohome" alt="">
+                <img src="<?php echo base_url();?>assets/home/images/dicatto-logo.png" class="img-responsive logohome" alt="">
                 </a>       
         </div>     
       
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="rx-navbar-collapse">
-          <ul class="nav navbar-nav pull-right">
+          <ul class="nav navbar-nav pull">
             <li><a data-scroll href="<?php echo base_url();?>#intro">Home</a></li>
             <li><a data-scroll href="<?php echo base_url();?>#app-features">About Us</a></li>
             <li><a data-scroll href="<?php echo base_url();?>#callCareer">Career</a></li>
@@ -175,7 +186,7 @@ padding-left: 21px;
                                 <div class="col-md-6">
                                     <div class="form-group">
                                     <label>Email *</label><span class="required" style="color:red;"> * </span>
-                                      <input type="text" class="form-control border-input" placeholder="Email" name="email" value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ""?>" required>
+                                      <input type="email" class="form-control border-input" placeholder="Email" name="email" value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ""?>" required>
                                       <strong style="color:red; "> <?php echo form_error('email'); ?></strong>
                                     </div>
                                 </div>
@@ -275,7 +286,7 @@ padding-left: 21px;
                     <li><a href="https://www.facebook.com/dicatto-1177704499057460/"  target="_blank"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="https://www.instagram.com/dicattoindia/" target="_blank"><i class="fa fa-instagram"></i></a></li>               
                     <li><a href="https://www.linkedin.com/company/dicatto/about/"  target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="https://twitter.com/dicatto1"  target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://twitter.com/dicattoindia"  target="_blank"><i class="fa fa-twitter"></i></a></li>
                 </ul>
             </div>
         </div>

@@ -128,7 +128,7 @@ width: 250px!important;
         <div class="container-fluid home-main" style="padding: 15px 0px 0px 0px;">
             
                 <!-- <div class="col-md-12 featured-center wow zoomIn" data-wow-duration="1.5s" data-wow-delay=".3s"> -->
-                <img src="<?php echo base_url();?>assets/home/images/ysyabt.png" class="img-responsive" alt="app-o2">
+                <img src="<?php echo base_url();?>assets/home/images/mainslider.png" class="img-responsive" alt="app-o2">
             
                
             
@@ -148,7 +148,7 @@ width: 250px!important;
         <div class="container-fluid home-main" style="padding: 15px 0px 0px 0px;">
             
                 <!-- <div class="col-md-12 featured-center wow zoomIn" data-wow-duration="1.5s" data-wow-delay=".3s"> -->
-                <img src="<?php echo base_url();?>assets/home/images/mainslider.png" class="img-responsive" alt="app-o2">
+                <img src="<?php echo base_url();?>assets/home/images/map.png" class="img-responsive" alt="app-o2">
             
                
             
@@ -872,34 +872,6 @@ width: 250px!important;
 }
 .dis-row{
     padding-top: 0px;
-}
-.homebox1{
-    margin-left: 0px;
-}
-.box{
-    width: 300px!important;
-}
-.homebox2{
-        margin-left: 0px;
-}
-.homebox4{
-        margin-left: 0px;
-}
-.homebox3{
-        margin-left: 0px;
-}
-.whytitale1{
-    left: 22%;
-}
-.whytitale2 {
-    left: 3%;
-}
-.whytital3{
-    left: 10%;
-
-}
-.whytital4{
-    left: 5%;
 }
 
 }
