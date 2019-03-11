@@ -31,6 +31,12 @@ class Welcome extends CI_Controller {
 		$this->load->view('index');
 		// $this->load->view('vendor_register');
 	}
+	 
+	public function index1()
+	{
+		$this->load->view('index1');
+		// $this->load->view('vendor_register');
+	}
 
 
 }

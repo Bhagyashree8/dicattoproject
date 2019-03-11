@@ -2368,8 +2368,9 @@ padding-top: 60px;
  -o-transition: all 300ms ease-out;
  -ms-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
-  opacity: 0.5;
+  opacity: 0.6;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+  border :1px solid #00aeef;
 }
 
 .box .overbox {
@@ -2515,7 +2516,7 @@ text-align: -webkit-center;
 
 @media only screen and (max-width: 600px) {
 .box{
-width: 339px!important;
+width: auto!important;
 }}
 .Team{
     padding: 50px 0px 0px 0px;
@@ -2534,7 +2535,7 @@ width: 301px!important;
 }}
 
 @media only screen and (max-width: 600px) {
-.is-sticky .navbar{
+..is-sticky .navbar{
 padding: 5px 0px 0px 0px!important;
     }
 .Career-dis{
@@ -2567,5 +2568,17 @@ margin-left: auto;
 }
 .homebox4{
 margin-left: auto;
+}
+.pull{
+    text-align: center!important;
+}
+}
+@media only screen and (min-width: 992px) { 
+.navbar-nav{
+float:right!important; 
+padding-top: 17px!important;
+}
+.navbar{
+    height: 105px;
 }}
 
